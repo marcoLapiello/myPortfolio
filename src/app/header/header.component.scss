@@ -1,6 +1,6 @@
 header {
     height: 98px;
-    background: linear-gradient(175deg, rgb(28, 28, 28),rgb(28, 28, 28), rgb(8, 70, 59));
+    background: linear-gradient(173deg, rgb(28, 28, 28),rgb(28, 28, 28), rgb(8, 70, 59));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,9 @@ header {
             a {
                 color: white;
                 text-decoration: none;
+                font-family: 'Karla';
+                font-size: 20px;
+                font-weight: 400;
             }
         }
 

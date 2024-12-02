@@ -1,0 +1,168 @@
+section {
+    background: linear-gradient(40deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .heroWrapper {
+        height: calc(100dvh - 98px);
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        span {
+            color: white;
+            font-family: 'Fira Code';
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Karla';
+            font-weight: 700;
+            font-size: 128px;
+            line-height: 128px;
+        }
+
+        .callToAction {
+            width: 363px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            z-index: 10;
+        }
+
+        .decor {
+            width: 100%;
+            max-width: 1440px;
+            position: absolute;
+            padding: 0px 96px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .decorLeft {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+
+                .animatedArrow {
+                    width: 30px;
+                    height: 48px;
+                    border: 1px solid #3DCFB6;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .vectorLeft {
+                    height: 240px;
+                    width: 1px;
+                    background-color: #3DCFB6;
+                }
+            }
+
+            .decorRight {
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                gap: 24px;
+
+                p {
+                    color: white;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                    writing-mode: vertical-rl;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #3DCFB6;
+                    }
+                }
+
+                .logos {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+
+                    .gitLogo {
+                        height: 32px;
+                        width: 32px;
+                        background-image: url('./../../../public/img/gitHubLogoAqua.png');
+                        position: relative;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-image: url('./../../../public/img/gitHubLogoWhite.png');
+
+                            .dot {
+                                background-image: url('./../../../public/img/dotAqua.png');
+                            }
+                        }
+
+                        .dot {
+                            height: 8px;
+                            width: 8px;
+                            position: absolute;
+                            top: 12px;
+                            left: 36px;
+                        }
+                    }
+
+                    .linkedInLogo {
+                        height: 32px;
+                        width: 32px;
+                        background-image: url('./../../../public/img/linkedInLogoAqua.png');
+                        position: relative;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-image: url('./../../../public/img/linkedInLogoWhite.png');
+
+                            .dot {
+                                background-image: url('./../../../public/img/dotAqua.png');
+                            }
+                        }
+
+                        .dot {
+                            height: 8px;
+                            width: 8px;
+                            position: absolute;
+                            top: 12px;
+                            left: 36px;
+                        }
+                    }
+                }
+
+                .vectorRight {
+                    height: 186px;
+                    width: 1px;
+                    background-color: white;
+                }
+
+                
+            }
+
+        }
+    }
+}

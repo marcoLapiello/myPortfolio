@@ -8,18 +8,26 @@
 
 body {
     height: 100dvh;
+}
+
+button {
+    height: 48px;
+    padding: 0px 24px;
+    color: white;
     font-family: 'Karla';
+    font-weight: 400;
+    font-size: 18;
+    background: none;
+    border: 1px solid white;
+    border-radius: 100px;
+
+    &:hover {
+        cursor: pointer;
+        color: #3DCFB6;
+        border: 1px solid #3DCFB6;
+    }
 }
 
-h1 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-}
-
-h2 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-}
 
 /* fira-code-300 - latin */
 @font-face {
