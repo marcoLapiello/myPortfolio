@@ -69,6 +69,22 @@ section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    img {
+                        animation: oscillate 1.6s ease-in-out infinite; /* Animazione perpetua */
+                    }
+
+                    @keyframes oscillate {
+                        0% {
+                          transform: translateY(0); /* Posizione iniziale (centrata) */
+                        }
+                        50% {
+                          transform: translateY(100%); /* Posizione in basso (flex-end) */
+                        }
+                        100% {
+                          transform: translateY(0); /* Ritorno alla posizione iniziale */
+                        }
+                    }
                 }
 
                 .vectorLeft {
