@@ -3,84 +3,121 @@ section {
     justify-content: center;
     align-items: center;
 
-    .skillsWrapper {
+    .sectionWrapper {
         width: 100%;
         max-width: 1440px;
         padding: 0px 96px;
         padding-bottom: 144px;
+        background: radial-gradient(circle, rgba(8, 70, 59, 0.3) 20%, rgba(28, 28, 28, 1) 80%);
+        background-position-x: -1000px;
+
+        background-repeat: no-repeat;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        gap: 20px;
 
-        .skillsLeft {
+
+
+        span {
+            color: rgba(61, 207, 182, 1);
+            font-family: 'Karla';
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .underWrapper {
             display: flex;
-            flex-direction: column;
-            // justify-content: flex-end;
-            gap: 24px;
+            justify-content: space-between;
+            align-items: flex-start;
 
-            span {
-                color: rgba(61, 207, 182, 1);
-                font-family: 'Karla';
-                font-weight: 700;
-                font-size: 24px;
-            }
-
-            .descriptionHolder {
-                height: 568px;
-                width: 520px;
-                padding: 32px;
-                background-color: rgba(61, 207, 182, 0.1);
-                backdrop-filter: blur(4px);
-                border: 1px solid rgba(61, 207, 182, 1);
-                border-radius: 30px;
+            .skillsDescription {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
+                gap: 24px;
 
-                h2 {
-                    color: rgba(61, 207, 182, 1);
-                    font-family: 'Fira Code';
-                    font-weight: 700;
-                    font-size: 64px;
-                }
 
-                .textWrapper {
+
+                .descriptionHolder {
+                    height: 568px;
+                    width: 520px;
+                    padding: 32px;
+                    background-color: rgba(61, 207, 182, 0.1);
+                    backdrop-filter: blur(4px);
+                    border: 1px solid rgba(61, 207, 182, 1);
+                    border-radius: 30px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: flex-start;
-                    gap: 36px;
 
-                    p {
-                        color: white;
-                        font-family: 'Karla';
-                        font-weight: 400;
-                        font-size: 18px;
-                    }
-
-                    h3 {
-                        color: white;
+                    h2 {
+                        color: rgba(61, 207, 182, 1);
                         font-family: 'Fira Code';
                         font-weight: 700;
-                        font-size: 24px;
+                        font-size: 64px;
+                    }
 
-                        span {
-                            color: rgba(61, 207, 182, 1);
+                    .textWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap: 36px;
+
+                        p {
+                            color: white;
+                            font-family: 'Karla';
+                            font-weight: 400;
+                            font-size: 18px;
+                        }
+
+                        h3 {
+                            color: white;
                             font-family: 'Fira Code';
                             font-weight: 700;
                             font-size: 24px;
+
+                            span {
+                                color: rgba(61, 207, 182, 1);
+                                font-family: 'Fira Code';
+                                font-weight: 700;
+                                font-size: 24px;
+                            }
+                        }
+
+                        span {
+                            color: rgba(255, 255, 255, 0.8);
+                            font-family: 'Karla';
+                            font-weight: 400;
+                            font-size: 16px;
                         }
                     }
+                }
+            }
+
+            .technologiesIconsWrapper {
+                width: 632px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 70px;
+
+                .iconContainer {
+                    width: 104px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
                     span {
-                        color: rgba(255, 255, 255, 0.8);
-                        font-family: 'Karla';
+                        color: white;
+                        font-family: 'Fira Code';
                         font-weight: 400;
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                 }
             }
         }
+
+
     }
 }
