@@ -1,5 +1,6 @@
 section {
     background: linear-gradient(40deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59));
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +11,7 @@ section {
         width: 100%;
         max-width: 1440px;
         padding: 0 96px;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -76,13 +78,15 @@ section {
 
                     @keyframes oscillate {
                         0% {
-                          transform: translateY(0);
+                            transform: translateY(0);
                         }
+
                         50% {
-                          transform: translateY(80%);
+                            transform: translateY(80%);
                         }
+
                         100% {
-                          transform: translateY(0);
+                            transform: translateY(0);
                         }
                     }
                 }
@@ -176,16 +180,17 @@ section {
                     background-color: white;
                 }
 
-                
+
             }
 
         }
 
         .animatedBanner {
-            width: 1480px;
+            width: 1440px;
             height: 62px;
             white-space: nowrap;
             overflow: hidden;
+            
             position: absolute;
             bottom: 40px;
             rotate: -3deg;
@@ -195,16 +200,64 @@ section {
             justify-content: center;
             align-items: center;
             gap: 56px;
-
+            mask-image: linear-gradient(
+                to right, 
+                rgba(0,0,0,0),
+                rgba(0,0,0,1) 20%,
+                rgba(0,0,0,1) 80%,
+                rgba(0,0,0,0)
+            );
             
 
-            p {
-                color: #3DCFB6;
-                font-family: 'Karla';
-                font-weight: 400;
-                font-size: 32px;
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                list-style: none;
+                gap: 56px;
+                flex-shrink: 0;
+                width: 1600px;
+
+                animation: infiniteSlide 10s linear infinite;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 56px;
+
+                    span {
+                        color: #3DCFB6;
+                        font-family: 'Karla';
+                        font-weight: 400;
+                        font-size: 32px;
+                    }
+
+                }
+
+            }
+
+            @keyframes infiniteSlide {
+               
+                to {
+                    transform: translateX(-100%); /* Testo scorre completamente a sinistra */
+                }
+                
             }
         }
     }
 }
 
+
+// p {
+            // color: #3DCFB6;
+            // font-family: 'Karla';
+            // font-weight: 400;
+            // font-size: 32px;
+
+            //     // animation: scroll 20s linear infinite;
+            // }
+
+            // img {
+            //     // animation: scroll 1s linear infinite;
+            // }
