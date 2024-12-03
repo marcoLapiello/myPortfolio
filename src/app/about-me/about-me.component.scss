@@ -1,0 +1,93 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .aboutMeWrapper {
+        width: 100%;
+        max-width: 1440px;
+        padding: 144px 96px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fotoHolder {
+            height: 708px;
+            position: relative;
+
+            .fotoDecoration {
+                height: 568px;
+                width: 568px;
+                position: absolute;
+                top: 20px;
+                left: -10px;
+            }
+
+            .foto {
+                height: 568px;
+                width: 568px;
+                position: absolute;
+                left: 20px;
+            }
+        }
+
+        .aboutHolder {
+            height: 708px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 24px;
+
+            span {
+                color: rgba(61, 207, 182, 1);
+                font-family: 'Karla';
+                font-weight: 500;
+                font-size: 24px;
+            }
+
+            .aboutTextHolder {
+                height: 568px;
+                width: 568px;
+                padding: 32px;
+                background-color: rgba(61, 207, 182, 0.1);
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(61, 207, 182, 1);
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h2 {
+                    color: rgba(61, 207, 182, 1);
+                    font-family: 'Fira Code';
+                    font-weight: 700;
+                    font-size: 64px;
+                }
+
+                p {
+                    color: white;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+
+                .listContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 24px;
+                    span {
+                        color: rgba(255, 255, 255, 0.8);
+                        font-family: 'Karla';
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+                }
+
+                
+            }
+        }
+        
+    }
+}
