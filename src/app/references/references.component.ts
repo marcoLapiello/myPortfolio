@@ -36,15 +36,13 @@ export class ReferencesComponent {
   @ViewChildren('singleReference') singleReferenceElements!: QueryList<ElementRef>;
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 
+
   scrollToActiveReference(): void {
     const scrollContainer = this.scrollContainer.nativeElement; // Contenitore scrollabile
     const activeElement = this.singleReferenceElements.toArray()[this.activeIndex]?.nativeElement; // Elemento attivo
   
     if (scrollContainer && activeElement) {
-      // Calcola la posizione necessaria per centrare l'elemento attivo
-      const containerCenter = scrollContainer.offsetWidth / 2; // Centro del contenitore
-      const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2; // Centro dell'elemento attivo
-      const scrollPosition = elementOffset - containerCenter; // Posizione da scrollare
+      let scrollPosition = this.getCoordinatesToScrollTo(scrollContainer, activeElement);
     
       // Esegui lo scroll per centrare l'elemento attivo
       scrollContainer.scrollTo({
@@ -54,17 +52,41 @@ export class ReferencesComponent {
     }
   }
 
+  getCoordinatesToScrollTo(scrollContainer:any, activeElement:any){
+    // Calcola la posizione necessaria per centrare l'elemento attivo
+    const containerCenter = scrollContainer.offsetWidth / 2; // Centro del contenitore
+    const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2; // Centro dell'elemento attivo
+    const scrollPosition = elementOffset - containerCenter; // Posizione da scrollare
+    return scrollPosition
+  }
+
+  updateActiveIndexOnScroll(): void {
+    const scrollContainer = this.scrollContainer.nativeElement;
+    const referencesArray = this.singleReferenceElements.toArray();
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    referencesArray.forEach((ref, index) => {
+      const element = ref.nativeElement;
+      const distance = Math.abs((element.offsetLeft + element.offsetWidth / 2) - (scrollContainer.scrollLeft + scrollContainer.offsetWidth / 2));
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    this.activeIndex = closestIndex;
+  }
+
   nextReference(): void {
     this.activeIndex = (this.activeIndex + 1) % this.references.length;
     this.scrollToActiveReference();
-    console.log(this.activeIndex);
-    
   }
 
   previousReference(): void {
     this.activeIndex = (this.activeIndex - 1 + this.references.length) % this.references.length;
     this.scrollToActiveReference();
-    console.log(this.activeIndex);
   }
-
+  
 }

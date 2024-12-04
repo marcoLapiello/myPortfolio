@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h3>What my colleagues say about me</h3>
     <img class="quotes" src="img/quotes.png" alt="" />
-    <div class="scrollContainer" #scrollContainer>
+    <div class="scrollContainer" #scrollContainer (scroll)="updateActiveIndexOnScroll()">
       @for (singleReference of references; track $index; let referenceIndex = $index) {
       <div class="singleReference"  #singleReference [class.active]="referenceIndex === activeIndex">
         <p>{{ singleReference.text }}</p>
