@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -30,5 +30,41 @@ export class ReferencesComponent {
       "author": "Emma Collins"
     }
   ]
+
+  activeIndex = 0;
+
+  @ViewChildren('singleReference') singleReferenceElements!: QueryList<ElementRef>;
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
+  scrollToActiveReference(): void {
+    const scrollContainer = this.scrollContainer.nativeElement; // Contenitore scrollabile
+    const activeElement = this.singleReferenceElements.toArray()[this.activeIndex]?.nativeElement; // Elemento attivo
+  
+    if (scrollContainer && activeElement) {
+      // Calcola la posizione necessaria per centrare l'elemento attivo
+      const containerCenter = scrollContainer.offsetWidth / 2; // Centro del contenitore
+      const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2; // Centro dell'elemento attivo
+      const scrollPosition = elementOffset - containerCenter; // Posizione da scrollare
+    
+      // Esegui lo scroll per centrare l'elemento attivo
+      scrollContainer.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth', // Scroll fluido
+      });
+    }
+  }
+
+  nextReference(): void {
+    this.activeIndex = (this.activeIndex + 1) % this.references.length;
+    this.scrollToActiveReference();
+    console.log(this.activeIndex);
+    
+  }
+
+  previousReference(): void {
+    this.activeIndex = (this.activeIndex - 1 + this.references.length) % this.references.length;
+    this.scrollToActiveReference();
+    console.log(this.activeIndex);
+  }
 
 }

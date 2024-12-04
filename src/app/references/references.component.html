@@ -2,16 +2,16 @@
   <div class="wrapper">
     <h3>What my colleagues say about me</h3>
     <img class="quotes" src="img/quotes.png" alt="" />
-    <div class="scrollContainer">
-      @for (singleReference of references; track $index) {
-      <div class="singleReference">
+    <div class="scrollContainer" #scrollContainer>
+      @for (singleReference of references; track $index; let referenceIndex = $index) {
+      <div class="singleReference"  #singleReference [class.active]="referenceIndex === activeIndex">
         <p>{{ singleReference.text }}</p>
         <span>{{ singleReference.author }}</span>
       </div>
       }
     </div>
     <div class="arrowsContainer">
-      <div class="leftArrow"></div>
+      <div class="leftArrow" (click)="previousReference()"></div>
 
       <div class="dotsContainer">
         @for (singleReference of references; track $index) {
@@ -19,7 +19,7 @@
         }
       </div>
 
-      <div class="rightArrow"></div>
+      <div class="rightArrow" (click)="nextReference()"></div>
     </div>
   </div>
 </section>
