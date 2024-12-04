@@ -1,11 +1,24 @@
-.scrollableSection {
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
     height: calc(452px + 144px);
-    // max-width: 1440px;
+    max-width: 1440px;
     padding-top: 144px;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 30%,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     h3 {
         color: rgba(61, 207, 182, 1);
@@ -14,18 +27,23 @@
         font-size: 32px;
     }
 
+    .quotes {
+        z-index: 1;
+        position: absolute;
+        top: 224px;
+        left: 310px;
+    }
+
     .scrollContainer {
-        // width: 100%;
-        // max-width: 1440px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 56px;
 
         .singleReference {
             height: 274px;
             width: 720px;
-            padding: 32px;
+            padding: 48px 32px;
             background-color: rgba(61, 207, 182, 0.1);
             backdrop-filter: blur(4px);
             border: 1px solid rgba(61, 207, 182, 1);
