@@ -1,0 +1,22 @@
+<section class="scrollableSection">
+    <h3>What my colleagues say about me</h3>
+    <div class="scrollContainer">
+        @for (singleReference of references; track $index) {
+            <div class="singleReference">
+                <p>{{singleReference.text}}</p>
+                <span>{{singleReference.author}}</span>
+            </div>
+        }
+    </div>
+    <div class="arrowsContainer">
+        <div class="leftArrow"></div>
+        
+        <div class="dotsContainer">
+            @for (singleReference of references; track $index) {
+                <img src="img/dotWhite.png" alt="">
+            }
+        </div>
+
+        <div class="rightArrow"></div>
+    </div>
+</section>

@@ -1,0 +1,99 @@
+.scrollableSection {
+    height: calc(452px + 144px);
+    // max-width: 1440px;
+    padding-top: 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        color: rgba(61, 207, 182, 1);
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .scrollContainer {
+        // width: 100%;
+        // max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 56px;
+
+        .singleReference {
+            height: 274px;
+            width: 720px;
+            padding: 32px;
+            background-color: rgba(61, 207, 182, 0.1);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(61, 207, 182, 1);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            p {
+                color: white;
+                font-family: 'Karla';
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            span {
+                color: rgba(255, 255, 255, 0.8);
+                font-family: 'Karla';
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .arrowsContainer {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        .dotsContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .leftArrow {
+            height: 20px;
+            width: 25px;
+            background-image: url('./../../../public/img/arrow_back_white.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            transform: all 200ms;
+
+            &:hover {
+                cursor: pointer;
+                background-image: url('./../../../public/img/arrow_back_aqua.png');
+                background-position: left;
+            }
+        }
+
+        .rightArrow {
+            height: 20px;
+            width: 25px;
+            background-image: url('./../../../public/img/arrow_forward_white.png');
+            background-position: left;
+            background-repeat: no-repeat;
+            transform: all 200ms;
+
+            &:hover {
+                cursor: pointer;
+                background-image: url('./../../../public/img/arrow_forward_aqua.png');
+                background-position: right;
+            }
+        }
+
+    }
+}
