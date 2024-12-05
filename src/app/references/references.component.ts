@@ -39,21 +39,13 @@ export class ReferencesComponent {
 
 
   scrollToActiveReference(): void {
-    const scrollContainer = this.scrollContainer.nativeElement; // Contenitore scrollabile
-    const activeElement = this.singleReferenceElements.toArray()[this.activeIndex]?.nativeElement; // Elemento attivo
-    
+    const scrollContainer = this.scrollContainer.nativeElement;
+    const activeElement = this.singleReferenceElements.toArray()[this.activeIndex]?.nativeElement;
     
     if (scrollContainer && activeElement) {
       let scrollPosition = this.getCoordinatesToScrollTo(scrollContainer, activeElement);
-
       this.arrowIsClicked = true;
-    
-      // Esegui lo scroll per centrare l'elemento attivo
-      scrollContainer.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth', // Scroll fluido
-      });
-
+      scrollContainer.scrollTo({ left: scrollPosition, behavior: 'smooth'});
       setTimeout(() => {
         this.arrowIsClicked = false;
       }, 400);
@@ -61,20 +53,13 @@ export class ReferencesComponent {
   }
 
   getCoordinatesToScrollTo(scrollContainer:HTMLDivElement, activeElement:HTMLDivElement){
-    // Calcola la posizione necessaria per centrare l'elemento attivo
-    const containerCenter = scrollContainer.offsetWidth / 2; // Centro del contenitore
-    const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2; // Centro dell'elemento attivo
-    const scrollPosition = elementOffset - containerCenter; // Posizione da scrollare
+    const containerCenter = scrollContainer.offsetWidth / 2;
+    const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2;
+    const scrollPosition = elementOffset - containerCenter;
     return scrollPosition
   }
 
-  updateActiveIndexOnScroll(): void {
-    if (this.arrowIsClicked) {
-      return;
-    }
-    const scrollContainer = this.scrollContainer.nativeElement;
-    const referencesArray = this.singleReferenceElements.toArray();
-
+  calculateClosestIndex(scrollContainer: HTMLDivElement, referencesArray: ElementRef<HTMLDivElement>[]): number {
     let closestIndex = 0;
     let closestDistance = Infinity;
 
@@ -86,8 +71,16 @@ export class ReferencesComponent {
         closestIndex = index;
       }
     });
-
-    this.activeIndex = closestIndex;
+    return closestIndex;
+  }
+  
+  updateActiveIndexOnManualScroll(): void {
+    if (this.arrowIsClicked) {
+      return;
+    }
+    const scrollContainer = this.scrollContainer.nativeElement;
+    const referencesArray = this.singleReferenceElements.toArray();
+    this.activeIndex = this.calculateClosestIndex(scrollContainer, referencesArray);
   }
 
   nextReference(): void {
