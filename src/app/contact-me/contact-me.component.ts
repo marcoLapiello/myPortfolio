@@ -14,13 +14,15 @@ export class ContactMeComponent {
 
   isChecked = false;
 
+  showPrivacyPolicyError = false;
+
   contactData = {
     name: "",
     email: "",
     message: "",
   }
 
-  mailTest = true;
+  
 
   http = inject(HttpClient);
 
@@ -43,12 +45,17 @@ export class ContactMeComponent {
     }
   }
 
+  mailTest = true;
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isChecked) {
+      console.log("Fine");
+      
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            
+            
             ngForm.resetForm();
           },
           error: (error) => {
@@ -56,9 +63,14 @@ export class ContactMeComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.isChecked) {
+      console.log("sent" , this.contactData);
+      this.isChecked = false;
+      this.showPrivacyPolicyError = false;
       ngForm.resetForm();
+    } else {
+      this.showPrivacyPolicyError = true;
+      console.log("Error");
     }
   }
 
