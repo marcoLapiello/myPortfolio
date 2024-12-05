@@ -128,6 +128,15 @@ section {
                         }
                     }
 
+                    .checked {
+                        background-image: url('./../../../public/img/CheckMarkChecked.png');
+
+                        &:hover {
+                            cursor: pointer;
+                            background-image: url('./../../../public/img/checkMarkCheckedHover.png');
+                        }
+                    }
+
                     p {
                         color: white;
                         font-family: 'Karla';

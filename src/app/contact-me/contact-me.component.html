@@ -34,7 +34,7 @@
 
         <div class="submitContainer">
             <div class="privPolicyContainer">
-                <div class="checkMark"></div>
+                <div class="checkMark" [ngClass]="isChecked ? 'checked' : '' " (click)="checkUncheck()"></div>
                 <p>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined</p>
             </div>
             <button>Say Hello ;&#41;</button>
