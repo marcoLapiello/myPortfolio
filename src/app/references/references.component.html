@@ -18,8 +18,8 @@
       <div class="leftArrow" (click)="previousReference()"></div>
 
       <div class="dotsContainer">
-        @for (singleReference of references; track $index) {
-        <img src="img/dotWhite.png" alt="" />
+        @for (singleReference of references; track $index; let referenceIndex = $index) {
+        <div class="dot" [class.activeDot]="referenceIndex === activeIndex"></div>
         }
       </div>
 

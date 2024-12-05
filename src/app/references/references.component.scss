@@ -115,6 +115,16 @@ section {
             justify-content: space-between;
             align-items: center;
             gap: 20px;
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                background-image: url('./../../../public/img/dotWhite.png');
+            }
+
+            .activeDot {
+                background-image: url('./../../../public/img/dotAqua.png');
+            }
         }
 
         .leftArrow {

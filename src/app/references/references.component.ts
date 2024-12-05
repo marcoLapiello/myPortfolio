@@ -32,6 +32,7 @@ export class ReferencesComponent {
   ]
 
   activeIndex = 0;
+  arrowIsClicked = false;
 
   @ViewChildren('singleReference') singleReferenceElements!: QueryList<ElementRef>;
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
@@ -40,19 +41,26 @@ export class ReferencesComponent {
   scrollToActiveReference(): void {
     const scrollContainer = this.scrollContainer.nativeElement; // Contenitore scrollabile
     const activeElement = this.singleReferenceElements.toArray()[this.activeIndex]?.nativeElement; // Elemento attivo
-  
+    
+    
     if (scrollContainer && activeElement) {
       let scrollPosition = this.getCoordinatesToScrollTo(scrollContainer, activeElement);
+
+      this.arrowIsClicked = true;
     
       // Esegui lo scroll per centrare l'elemento attivo
       scrollContainer.scrollTo({
         left: scrollPosition,
         behavior: 'smooth', // Scroll fluido
       });
+
+      setTimeout(() => {
+        this.arrowIsClicked = false;
+      }, 400);
     }
   }
 
-  getCoordinatesToScrollTo(scrollContainer:any, activeElement:any){
+  getCoordinatesToScrollTo(scrollContainer:HTMLDivElement, activeElement:HTMLDivElement){
     // Calcola la posizione necessaria per centrare l'elemento attivo
     const containerCenter = scrollContainer.offsetWidth / 2; // Centro del contenitore
     const elementOffset = activeElement.offsetLeft + activeElement.offsetWidth / 2; // Centro dell'elemento attivo
@@ -61,6 +69,9 @@ export class ReferencesComponent {
   }
 
   updateActiveIndexOnScroll(): void {
+    if (this.arrowIsClicked) {
+      return;
+    }
     const scrollContainer = this.scrollContainer.nativeElement;
     const referencesArray = this.singleReferenceElements.toArray();
 
