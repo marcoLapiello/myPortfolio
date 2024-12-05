@@ -73,16 +73,33 @@ section {
                 font-size: 18px;
             }
 
-            span {
-                color: rgba(255, 255, 255, 0.8);
-                font-family: 'Karla';
-                font-weight: 400;
-                font-size: 16px;
+            .authorName {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+
+                .vector {
+                    height: 1px;
+                    width: 100%;
+                    background-color: white;
+                }
+                span {
+                    color: rgba(255, 255, 255, 0.8);
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
             }
+
+            
         }
 
         .active {
             scale: 1;
+            background-color: rgba(61, 207, 182, 0.35);
         }
     }
 

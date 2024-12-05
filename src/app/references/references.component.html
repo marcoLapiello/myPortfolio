@@ -6,7 +6,11 @@
       @for (singleReference of references; track $index; let referenceIndex = $index) {
       <div class="singleReference"  #singleReference [class.active]="referenceIndex === activeIndex">
         <p>{{ singleReference.text }}</p>
-        <span>{{ singleReference.author }}</span>
+        <div class="authorName">
+          <div class="vector"></div>
+          <span>{{ singleReference.author }}</span>
+        </div>
+        
       </div>
       }
     </div>
