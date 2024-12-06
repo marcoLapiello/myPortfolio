@@ -28,6 +28,37 @@ button {
         cursor: pointer;
         color: #3DCFB6;
         border: 1px solid #3DCFB6;
+
+        div {
+            animation: infiniteSlide 1s linear infinite;
+        }
+
+        @keyframes infiniteSlide {
+            0% {
+                transform: translateX( 0%);
+            }
+                
+            25% {
+                transform: translateX(+10%);
+
+            }
+
+            50% {
+                transform: translateX(0%);
+
+            }
+
+            75% {
+                transform: translateX(-10%);
+
+            }
+
+            100% {
+                transform: translateX(0%);
+
+            }
+
+        }
     }
 }
 
