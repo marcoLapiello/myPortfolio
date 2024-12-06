@@ -1,6 +1,6 @@
 header {
     height: 98px;
-    background: linear-gradient(173deg, rgb(28, 28, 28),rgb(28, 28, 28), rgb(8, 70, 59));
+    background: linear-gradient(173deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,21 +18,32 @@ header {
             align-items: center;
             gap: 24px;
 
-            .switchLanguage {
+            .switchLanguageDefault {
                 height: 28px;
                 width: 84px;
-                border: 1px solid #3DCFB6;
-                border-radius: 100px;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
+                background-image: url(./../../../public/img/englishDefault.png);
+
+                &:Hover {
+                    cursor: pointer;
+                    background-image: url(./../../../public/img/englishHover.png);
+                }
+            }
+
+            .switchLanguageGerman {
+                height: 28px;
+                width: 84px;
+                background-image: url(./../../../public/img/germanDefault.png);
+
+                &:Hover {
+                    cursor: pointer;
+                    background-image: url(./../../../public/img/germanHover.png);
+                }
             }
 
             a {
                 color: white;
                 text-decoration: none;
-                font-family: 'Karla';
+                font-family: 'Fira Code';
                 font-size: 20px;
                 font-weight: 400;
             }
@@ -46,12 +57,13 @@ header {
             .logoText {
                 display: flex;
                 flex-direction: column;
-                
+
 
                 .logo {
                     height: 36px;
                     width: 24px;
                 }
+
                 span {
                     color: white;
                     font-family: 'Fira Code';
@@ -62,6 +74,6 @@ header {
             }
         }
 
-        
+
     }
 }

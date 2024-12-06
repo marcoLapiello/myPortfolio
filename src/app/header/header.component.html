@@ -1,10 +1,7 @@
 <header>
   <nav>
     <div class="navLeft">
-      <div class="switchLanguage">
-        <span>EN</span>
-        <span>DE</span>
-      </div>
+      <div [ngClass]="language === 'english' ? 'switchLanguageDefault' : 'switchLanguageGerman' " (click)="switchLanguage()"></div>
       <a href="#aboutMe">About me</a>
       <a href="#skills">Skills</a>
       <a href="">Projects</a>
