@@ -13,8 +13,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactMeComponent {
 
   isChecked = false;
-
   showPrivacyPolicyError = false;
+  mailTest = true;
 
   contactData = {
     name: "",
@@ -45,8 +45,6 @@ export class ContactMeComponent {
     }
   }
 
-  mailTest = true;
-
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isChecked) {
       console.log("Fine");
@@ -69,8 +67,9 @@ export class ContactMeComponent {
       this.showPrivacyPolicyError = false;
       ngForm.resetForm();
     } else {
+      ngForm.form.markAllAsTouched();
       this.showPrivacyPolicyError = true;
-      console.log("Error");
+      console.log("error");
     }
   }
 
