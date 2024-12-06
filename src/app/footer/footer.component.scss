@@ -1,0 +1,108 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0px 96px;
+        padding-bottom: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .footerLeft {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .logoContainer {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                .logoText {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .logo {
+                        height: 36px;
+                        width: 24px;
+                    }
+
+                    span {
+                        color: white;
+                        font-family: 'Fira Code';
+                        font-weight: bolder;
+                        font-size: 24px;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .spanContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                span {
+                    color: white;
+                    font-family: 'Karla';
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        .name {
+            color: rgba(61, 207, 182, 1);
+            font-family: 'Fira Code';
+            font-size: 18px;
+            font-weight: 400;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+
+        nav {
+            padding-top: 34px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-family: 'Karla';
+                font-size: 16px;
+                font-weight: 400;
+                position: relative;
+                transition: all 300ms ease-in-out;
+
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    background-image: url('./../../../public/img/dotAqua.png');
+                    position: absolute;
+                    left: -14px;
+                    top: 5px;
+                    opacity: 0;
+                    transition: all 300ms ease-in-out;
+                }
+
+                &:hover {
+                    color: rgba(61, 207, 182, 1);
+
+                    .dot{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
