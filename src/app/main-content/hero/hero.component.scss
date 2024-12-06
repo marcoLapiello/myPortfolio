@@ -128,15 +128,15 @@ section {
                     .gitLogo {
                         height: 32px;
                         width: 32px;
-                        background-image: url('./../../../public/img/gitHubLogoAqua.png');
+                        background-image: url('./../../../../public/img/gitHubLogoAqua.png');
                         position: relative;
 
                         &:hover {
                             cursor: pointer;
-                            background-image: url('./../../../public/img/gitHubLogoWhite.png');
+                            background-image: url('./../../../../public/img/gitHubLogoWhite.png');
 
                             .dot {
-                                background-image: url('./../../../public/img/dotAqua.png');
+                                background-image: url('./../../../../public/img/dotAqua.png');
                             }
                         }
 
@@ -152,15 +152,15 @@ section {
                     .linkedInLogo {
                         height: 32px;
                         width: 32px;
-                        background-image: url('./../../../public/img/linkedInLogoAqua.png');
+                        background-image: url('./../../../../public/img/linkedInLogoAqua.png');
                         position: relative;
 
                         &:hover {
                             cursor: pointer;
-                            background-image: url('./../../../public/img/linkedInLogoWhite.png');
+                            background-image: url('./../../../../public/img/linkedInLogoWhite.png');
 
                             .dot {
-                                background-image: url('./../../../public/img/dotAqua.png');
+                                background-image: url('./../../../../public/img/dotAqua.png');
                             }
                         }
 

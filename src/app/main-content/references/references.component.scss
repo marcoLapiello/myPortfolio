@@ -119,25 +119,25 @@ section {
             .dot {
                 width: 8px;
                 height: 8px;
-                background-image: url('./../../../public/img/dotWhite.png');
+                background-image: url('./../../../../public/img/dotWhite.png');
             }
 
             .activeDot {
-                background-image: url('./../../../public/img/dotAqua.png');
+                background-image: url('./../../../../public/img/dotAqua.png');
             }
         }
 
         .leftArrow {
             height: 20px;
             width: 25px;
-            background-image: url('./../../../public/img/arrow_back_white.png');
+            background-image: url('./../../../../public/img/arrow_back_white.png');
             background-position: right;
             background-repeat: no-repeat;
             transform: all 200ms;
 
             &:hover {
                 cursor: pointer;
-                background-image: url('./../../../public/img/arrow_back_aqua.png');
+                background-image: url('./../../../../public/img/arrow_back_aqua.png');
                 background-position: left;
             }
         }
@@ -145,14 +145,14 @@ section {
         .rightArrow {
             height: 20px;
             width: 25px;
-            background-image: url('./../../../public/img/arrow_forward_white.png');
+            background-image: url('./../../../../public/img/arrow_forward_white.png');
             background-position: left;
             background-repeat: no-repeat;
             transform: all 200ms;
 
             &:hover {
                 cursor: pointer;
-                background-image: url('./../../../public/img/arrow_forward_aqua.png');
+                background-image: url('./../../../../public/img/arrow_forward_aqua.png');
                 background-position: right;
             }
         }

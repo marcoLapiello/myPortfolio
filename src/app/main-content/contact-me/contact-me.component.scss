@@ -143,20 +143,20 @@ section {
                     .checkMark {
                         width: 24px;
                         height: 24px;
-                        background-image: url('./../../../public/img/checkMarkOutline.png');
+                        background-image: url('./../../../../public/img/checkMarkOutline.png');
 
                         &:hover {
                             cursor: pointer;
-                            background-image: url('./../../../public/img/checkMarkOutlineHover.png');
+                            background-image: url('./../../../../public/img/checkMarkOutlineHover.png');
                         }
                     }
 
                     .checked {
-                        background-image: url('./../../../public/img/CheckMarkChecked.png');
+                        background-image: url('./../../../../public/img/CheckMarkChecked.png');
 
                         &:hover {
                             cursor: pointer;
-                            background-image: url('./../../../public/img/checkMarkCheckedHover.png');
+                            background-image: url('./../../../../public/img/checkMarkCheckedHover.png');
                         }
                     }
 
