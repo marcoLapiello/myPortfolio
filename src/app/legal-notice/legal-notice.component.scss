@@ -1,0 +1,27 @@
+section {
+    background: linear-gradient(40deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        height: calc(100dvh - 98px);
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 96px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p {
+            color: white;
+            font-family: 'Karla';
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+}
