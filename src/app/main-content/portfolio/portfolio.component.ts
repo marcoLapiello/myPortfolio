@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  imports: [ModalComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

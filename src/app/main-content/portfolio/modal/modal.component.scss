@@ -1,0 +1,118 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(1440px - (96px * 2));
+    background: linear-gradient(40deg, rgb(28, 28, 28) 30%, rgb(8, 70, 59));
+    padding: 80px;
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 30px;
+    z-index: 1001;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .project-details {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .title {
+            .projectNr {
+                color: rgba(61, 207, 182, 1);
+                font-family: 'Karla';
+                font-weight: 700;
+                font-size: 128px;
+                line-height: 100px;
+            }
+        
+            h2 {
+                color: white;
+                font-family: 'Fira Code';
+                font-size: 64px;
+                // line-height: 52px;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3 {
+                color: rgba(61, 207, 182, 1);
+                font-family: 'Fira Code';
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            p {
+                color: white;
+                font-family: 'Karla';
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }   
+}
+
+.close-button {
+    width: 30px;
+    height: 30px;
+    background-image: url(./../../../../../public/img/close_white_small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    border: none;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url(./../../../../../public/img/close_aqua_big.png);
+    }
+}
+
+.nextProjectButton {
+    width: 151px;
+    color: rgba(61, 207, 182, 1);
+    font-size: 18px;
+    position: absolute;
+    bottom: 55px;
+    right: 80px;
+    padding: 0;
+    border: none;
+    transition: all 100ms ease-in;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        scale: 0.9;
+        transition: all 100ms ease-in;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+        gap: 12px;
+
+        img {
+            scale: 1;
+        }
+    }
+}
