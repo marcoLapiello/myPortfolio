@@ -10,7 +10,6 @@ section {
         padding-bottom: 16px;
 
         .linksContainer {
-            width: 880px;
             display: flex;
             flex-direction: column;
             gap: 41px;
@@ -38,19 +37,60 @@ section {
             }
 
             .projectsContainer {
+                width: 880px;
                 border-bottom: 1px solid rgba(61, 207, 182, 1);
+
 
                 .singleProject {
                     border-top: 1px solid rgba(61, 207, 182, 1);
                     padding: 40px 32px;
                     display: flex;
                     justify-content: space-between;
+                    position: relative;
+                    transition: all 150ms ease-in;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(61, 207, 182, 0.3);
+
+                        h3 > img{
+                            opacity: 1;
+                        }
+                    }
+
+                    &:first-child:hover {
+                        .projectImgTop {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:last-child:hover {
+                        .projectImgBottom {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:not(:first-child):not(:last-child):hover {
+                        .projectImgMiddle {
+                            opacity: 1;
+                        }
+                    }
 
                     h3 {
                         color: white;
                         font-family: 'Fira Code';
                         font-weight: 700;
                         font-size: 24px;
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        position: relative;
+
+                        img {
+                            rotate: 315deg;
+                            opacity: 0;
+                            transition: all 150ms ease-in;
+                        }
                     }
 
                     .projectTechnologies {
@@ -66,7 +106,40 @@ section {
                             font-size: 18px;
                         }
                     }
+
+                    .projectImgTop {
+                        position: absolute;
+                        top: 0;
+                        left: calc(100% + 72px);
+                        opacity: 0;
+                        transition: all 150ms ease-in;
+                    }
+
+                    .projectImgBottom {
+                        position: absolute;
+                        bottom: -4px;
+                        left: calc(100% + 72px);
+                        opacity: 0;
+                        transition: all 150ms ease-in;
+                    }
+
+                    .projectImgMiddle {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: calc(100% + 72px);
+                        opacity: 0;
+                        transition: all 150ms ease-in;
+                    }
+
+                    .projectImgBackground {
+                        z-index: -1;
+                        position: absolute;
+                        left: 20px;
+                        top: 20px;
+                    }
                 }
+
             }
         }
 
