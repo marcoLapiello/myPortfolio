@@ -10,24 +10,24 @@ export class ReferencesComponent {
 
   references = [
     {
-      "text": "The attention to detail and creativity that Marco brings to his work is truly remarkable. He has the ability to transform even the vaguest ideas into functional and visually stunning results. His dedication to perfection and his deep understanding of frontend development make him a valuable asset to any team. I am constantly amazed at how he goes above and beyond expectations in every project.",
-      "author": "Sophia Reynolds"
+      "text": "Im Rahmen eines gemeinsamen Projekts konnte ich die exzellente Zusammenarbeit mit Marco schätzen. Seine Zuverlässigkeit und organisatorischen Fähigkeiten waren beeindruckend. Darüber hinaus hat er durch seine motivierende Art maßgeblich zum Erfolg unseres Teams beigetragen.",
+      "author": "Tümay Batman"
     },
     {
-      "text": "Working with Marco was an absolute pleasure from start to finish. He not only possesses exceptional technical skills but also brings a collaborative spirit that makes the process enjoyable and productive. His ability to analyze complex challenges and provide practical, innovative solutions is unmatched. Marco's professionalism and commitment to excellence are evident in every aspect of his work.",
-      "author": "James Carter"
+      "text": "Mit Marco zusammenzuarbeiten, war stets eine positive Erfahrung. Er hat nicht nur fundiertes Wissen, sondern auch ein gutes Auge für Details. Ich schätze besonders, dass er oft über den eigenen Aufgabenbereich hinausdenkt und damit neue Ansätze ins Team bringt. Seine Weitsicht hat dem Projekt immer wieder hilfreiche Impulse gegeben.",
+      "author": "Richard Streu"
     },
     {
-      "text": "Marco has an extraordinary talent for turning ideas into reality. His designs are not only functional but also carry a unique elegance that sets them apart. His ability to listen and adapt to feedback ensures that the final product aligns perfectly with the vision. Whether it's a small task or a large-scale project, Marco delivers with precision and creativity that exceed expectations.",
-      "author": "Isabella Hart"
+      "text": "Marco zeichnet sich durch herausragende organisatorische Fähigkeiten und eine klare, strukturierte Arbeitsweise aus. Er arbeitet stets zuverlässig, ist äußerst pünktlich und versteht es, Aufgaben effizient und zielorientiert zu planen. Seine Führungskompetenz zeigt sich in einem motivierenden Umgang mit dem Team und der Fähigkeit, Projekte erfolgreich zum Abschluss zu bringen.",
+      "author": "Murat Catili"
     },
     {
-      "text": "I was thoroughly impressed by Marco's ability to handle tight deadlines without compromising on quality. His time management skills are impeccable, and his work ethic is admirable. Despite the pressure, Marco remains calm, focused, and solution-oriented, which inspires confidence in the team. His attention to detail ensures that every aspect of the project is executed flawlessly.",
-      "author": "Liam Turner"
+      "text": "Marco hat sich für ein ansprechendes und benutzerfreundliches Design eingesetzt und durch seine JavaScript-Kenntnisse zur Verbesserung der Funktionalität des Projekts beigetragen. Die Zusammenarbeit war stets angenehm und zielführend.",
+      "author": "Mirko Rinke"
     },
     {
-      "text": "Marco is an exceptional team player whose expertise in frontend development has a profound impact on any project he is part of. He is not only technically skilled but also incredibly supportive, ensuring that everyone on the team feels empowered and valued. His innovative approach to problem-solving and his relentless pursuit of excellence make him an indispensable contributor to any initiative.",
-      "author": "Emma Collins"
+      "text": "Mit Marco zusammenzuarbeiten, war stets eine positive Erfahrung. Er hat nicht nur fundiertes Wissen, sondern auch ein gutes Auge für Details. Ich schätze besonders, dass er oft über den eigenen Aufgabenbereich hinausdenkt und damit neue Ansätze ins Team bringt. Seine Weitsicht hat dem Projekt immer wieder hilfreiche Impulse gegeben.",
+      "author": "David Werner"
     }
   ]
 
