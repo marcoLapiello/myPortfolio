@@ -7,11 +7,13 @@
         Explore a selection of my work here - Interact with projects to see my
         skills in action.
       </p>
-
-      <app-modal></app-modal>
+      @if (showModal === true) {
+        <app-modal [project]="selectedProject" [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
+      }
+      
       <div class="projectsContainer">
         @for (singleProject of projects; track $index) {
-          <div class="singleProject">
+          <div class="singleProject" (click)="openModal(singleProject, $index)">
             <h3>{{ singleProject.title }} <img src="img/arrow_forward_white.png" alt=""></h3>
             <div class="projectTechnologies">
               <p>

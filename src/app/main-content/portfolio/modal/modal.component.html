@@ -4,21 +4,23 @@
 
   <div class="project-details">
     <div class="title">
-      <span class="projectNr">01</span>
-      <h2>Join</h2>
+      <span class="projectNr">{{ projectId }}</span>
+      <h2>{{ project.title }}</h2>
     </div>
 
     <div class="description">
       <h3>What is this project about?</h3>
       <p>
-        Task manager inspired by the Kanban System. Create and organize tasks
-        using drag and drop functions, assign users and categories.
+        {{ project.description }}
       </p>
-      <ul class="technologies">
+      <div class="technologies">
         @for (technology of project?.technologies; track $index) {
-        <li>{{ technology }}</li>
+            <div class="technologyWrapper">
+                <img [src]="project.techIconsPaths[$index]" alt="" />
+                <span>{{ technology }}</span>
+            </div>
         }
-      </ul>
+      </div>
     </div>
 
     <div class="linksButton">
@@ -27,6 +29,8 @@
     </div>
   </div>
 
-  <img src="img/joinImgBig.png" alt="" />
-  <button class="nextProjectButton">Next project <img src="img/arrow_forward_aqua.png" alt=""></button>
+  <img [src]="project.modalImgPath" alt="" />
+  <button class="nextProjectButton">
+    Next project <img src="img/arrow_forward_aqua.png" alt="" />
+  </button>
 </div>
