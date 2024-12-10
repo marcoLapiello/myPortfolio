@@ -25,8 +25,8 @@ export class PortfolioComponent {
         'img/modal_technology_icons/firebase.png',
         'img/modal_technology_icons/html.png',
         'img/modal_technology_icons/css.png',
-      ]
-      // gitHubLink:
+      ],
+      gitHubLink: "https://github.com/marcoLapiello/Developer-Akademie-Join",
       // liveTestLink:
     },
     {
@@ -40,8 +40,8 @@ export class PortfolioComponent {
         'img/modal_technology_icons/javaScript.png',
         'img/modal_technology_icons/html.png',
         'img/modal_technology_icons/css.png',
-      ]
-      // gitHubLink:
+      ],
+      gitHubLink: "https://github.com/marcoLapiello/El-pollo-loco---javascript-game",
       // liveTestLink:
     },
   ]

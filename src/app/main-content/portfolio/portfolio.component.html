@@ -8,7 +8,7 @@
         skills in action.
       </p>
       @if (showModal === true) {
-        <app-modal [project]="selectedProject" [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
+        <app-modal [allProjects]="projects" [project]="selectedProject" [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
       }
       
       <div class="projectsContainer">

@@ -4,7 +4,7 @@
 
   <div class="project-details">
     <div class="title">
-      <span class="projectNr">{{ projectId }}</span>
+      <span class="projectNr">0{{ projectId }}</span>
       <h2>{{ project.title }}</h2>
     </div>
 
@@ -24,7 +24,7 @@
     </div>
 
     <div class="linksButtonContainer">
-      <button>
+      <button (click)="openGitHubRepo()">
         <span>GitHub</span>
         <div class="arrowContainer">
           <img src="img/arrow_forward_aqua.png" alt="" />
@@ -40,7 +40,7 @@
   </div>
 
   <img [src]="project.modalImgPath" alt="" />
-  <button class="nextProjectButton">
+  <button (click)="nextProject()" class="nextProjectButton">
     Next project <img src="img/arrow_forward_aqua.png" alt="" />
   </button>
 </div>
