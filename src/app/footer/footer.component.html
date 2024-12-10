@@ -1,7 +1,7 @@
 <footer>
   <div class="wrapper">
     <div class="footerLeft">
-      <div class="logoContainer">
+      <div [routerLink] = "['']" (click)="scrollToSection('header')" class="logoContainer">
         <img class="logo" src="img/logo.png" alt="" />
         <div class="logoText">
           <span>Marco</span>
@@ -17,8 +17,8 @@
     <span class="name">© Marco Lapiello 2024</span>
 
     <nav>
-      <a href=""><div class="dot"></div>GitHub</a>
-      <a href=""><div class="dot"></div>LinkedIn</a>
+      <a href="https://github.com/marcoLapiello"><div class="dot"></div>GitHub</a>
+      <a href="https://www.linkedin.com/in/marco-lapiello/"><div class="dot"></div>LinkedIn</a>
       <a href=""><div class="dot"></div>Email</a>
       <a [routerLink] = "['/legalNotice']" href=""><div class="dot"></div>Legal Notice</a>
     </nav>

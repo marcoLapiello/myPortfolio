@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ScrollAndLinkService } from '../scroll-and-links.service';
+
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +10,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  constructor (private scrollAndLinkService: ScrollAndLinkService){}
+
+  scrollToSection(sectionId:string): void {
+    this.scrollAndLinkService.scrollToSection(sectionId);
+  }
 
 }

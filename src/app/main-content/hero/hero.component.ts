@@ -1,11 +1,25 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ScrollAndLinkService } from '../../scroll-and-links.service';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
+  constructor(private scrollAndLinkService: ScrollAndLinkService) {}
 
+  scrollToSection(sectionId:string): void {
+    this.scrollAndLinkService.scrollToSection(sectionId);
+  }
+
+  linkToGitHub() {
+    this.scrollAndLinkService.linkToGitHub();
+  }
+
+  linkToLinkedIn() {
+    this.scrollAndLinkService.linkToLinkedIn();
+  }
 }

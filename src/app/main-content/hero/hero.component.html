@@ -1,10 +1,10 @@
-<section>
+<section id="hero">
   <div class="heroWrapper">
         <span>Frontend Developer</span>
         <h1>Marco Lapiello</h1>
         <div class="callToAction">
-            <button><div>Check my work</div></button>
-            <button><div>Contact me</div></button>
+            <button (click)="scrollToSection('portfolio')"><div>Check my work</div></button>
+            <button (click)="scrollToSection('contactMe')"><div>Contact me</div></button>
         </div>
         <div class="decor">
             <div class="decorLeft">
@@ -18,10 +18,10 @@
             <div class="decorRight">
                 <p>marcolapiello&#64;gmail.com</p>
                 <div class="logos">
-                <div class="gitLogo">
+                <div (click)="linkToGitHub()" class="gitLogo">
                     <div class="dot"></div>
                 </div>
-                <div class="linkedInLogo">
+                <div (click)="linkToLinkedIn()" class="linkedInLogo">
                     <div class="dot"></div>
                 </div>
                 </div>

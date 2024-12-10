@@ -18,21 +18,13 @@ export class ModalComponent {
   }
 
   nextProject() {
-    
-    // Incrementa l'ID del progetto
-    this.projectId = ((this.projectId) % this.allProjects.length) + 1; // Torna al primo progetto se supera la lunghezza
-  
-    // Aggiorna il progetto corrente
-    
+    this.projectId = ((this.projectId) % this.allProjects.length) + 1;
     this.project = this.allProjects[this.projectId - 1];
-    
-    console.log("Current Project ID:", this.projectId);
-    console.log("Current Project:", this.project);
   }
 
   openGitHubRepo(): void {
     if (this.project?.gitHubLink) {
-      window.open(this.project.gitHubLink, '_blank'); // Apre il link in una nuova scheda
+      window.open(this.project.gitHubLink, '_blank');
     } else {
       console.error('GitHub link not available for this project.');
     }
@@ -40,7 +32,7 @@ export class ModalComponent {
 
   openLiveTest(): void {
     if (this.project?.liveTestLink) {
-      window.open(this.project.liveTestLink, '_blank'); // Apre il link al live test
+      window.open(this.project.liveTestLink, '_blank');
     } else {
       console.error('Live test link not available for this project.');
     }
