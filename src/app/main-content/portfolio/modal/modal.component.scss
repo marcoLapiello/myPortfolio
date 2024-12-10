@@ -78,6 +78,7 @@
                     display: flex;
                     align-items: center;
                     gap: 4px;
+
                     span {
                         color: white;
                         font-family: 'Karla';
@@ -86,7 +87,56 @@
                     }
                 }
 
-                
+
+            }
+        }
+
+        .linksButtonContainer {
+            width: 304px;
+            display: flex;
+            gap: 32px;
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                position: relative;
+
+                span {
+                    color: white;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+
+                div {
+                    width: 18px;
+                    height: 18px;
+                    animation: none;
+                    position: relative;
+
+                    img {
+                        width: 11px;
+                        height: 11px;
+                        rotate: 315deg;
+                        position: absolute;
+                        left: 4px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 150ms ease-in-out;
+                    }
+                }
+
+                &:hover {
+                    div {
+                        img {
+                            left: 8px;
+                            top: 0px;
+                            transform: translateY(0%);
+                            scale: 1.2;
+                        }
+                    }
+                }
             }
         }
     }

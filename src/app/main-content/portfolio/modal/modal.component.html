@@ -15,17 +15,27 @@
       </p>
       <div class="technologies">
         @for (technology of project?.technologies; track $index) {
-            <div class="technologyWrapper">
-                <img [src]="project.techIconsPaths[$index]" alt="" />
-                <span>{{ technology }}</span>
-            </div>
+        <div class="technologyWrapper">
+          <img [src]="project.techIconsPaths[$index]" alt="" />
+          <span>{{ technology }}</span>
+        </div>
         }
       </div>
     </div>
 
-    <div class="linksButton">
-      <button>GitHub</button>
-      <button>Live Test</button>
+    <div class="linksButtonContainer">
+      <button>
+        <span>GitHub</span>
+        <div class="arrowContainer">
+          <img src="img/arrow_forward_aqua.png" alt="" />
+        </div>
+      </button>
+      <button>
+        <span>Live Test</span>
+        <div class="arrowContainer">
+          <img src="img/arrow_forward_aqua.png" alt="" />
+        </div>
+      </button>
     </div>
   </div>
 
