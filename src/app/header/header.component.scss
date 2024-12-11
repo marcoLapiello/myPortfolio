@@ -42,11 +42,14 @@ header {
                 height: 28px;
                 width: 84px;
                 background-image: url(./../../../public/img/englishDefault.png);
-
-                &:Hover {
-                    cursor: pointer;
-                    background-image: url(./../../../public/img/englishHover.png);
+                
+                @media(hover: hover) {
+                    &:Hover {
+                        cursor: pointer;
+                        background-image: url(./../../../public/img/englishHover.png);
+                    }
                 }
+                
             }
 
             .switchLanguageGerman {
@@ -54,10 +57,13 @@ header {
                 width: 84px;
                 background-image: url(./../../../public/img/germanDefault.png);
 
-                &:Hover {
-                    cursor: pointer;
-                    background-image: url(./../../../public/img/germanHover.png);
+                @media(hover: hover) {
+                    &:Hover {
+                        cursor: pointer;
+                        background-image: url(./../../../public/img/germanHover.png);
+                    }
                 }
+                
             }
 
             a {
@@ -81,13 +87,16 @@ header {
                     transition: all 300ms ease-in-out;
                 }
 
-                &:hover {
-                    color: rgba(61, 207, 182, 1);
-
-                    .dot{
-                        opacity: 1;
+                @media(hover: hover) {
+                    &:hover {
+                        color: rgba(61, 207, 182, 1);
+    
+                        .dot{
+                            opacity: 1;
+                        }
                     }
                 }
+                
             }
         }
 
@@ -142,6 +151,10 @@ header {
             height: 30px;
             @media (max-width: 450px) {
                 height: 20px;
+            }
+
+            &:hover{
+                cursor: pointer;
             }
         }
 

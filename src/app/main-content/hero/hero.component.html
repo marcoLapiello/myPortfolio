@@ -2,7 +2,7 @@
   <div class="heroWrapper">
         <span>Frontend Developer</span>
         <h1>Marco Lapiello</h1>
-        <div class="callToAction">
+        <div class="buttonsContainer">
             <button (click)="scrollToSection('portfolio')"><div>Check my work</div></button>
             <button (click)="scrollToSection('contactMe')"><div>Contact me</div></button>
         </div>
@@ -18,47 +18,50 @@
             <div class="decorRight">
                 <p (click)="sendEmail()">marcolapiello&#64;gmail.com</p>
                 <div class="logos">
-                <div (click)="linkToGitHub()" class="gitLogo">
-                    <div class="dot"></div>
-                </div>
-                <div (click)="linkToLinkedIn()" class="linkedInLogo">
-                    <div class="dot"></div>
-                </div>
+                    <div (click)="sendEmail()" class="mailLogo">
+                        <div class="dot"></div>
+                    </div>
+                    <div (click)="linkToGitHub()" class="gitLogo">
+                        <div class="dot"></div>
+                    </div>
+                    <div (click)="linkToLinkedIn()" class="linkedInLogo">
+                        <div class="dot"></div>
+                    </div>
                 </div>
                 <div class="vectorRight"></div>
             </div>
         </div>
         <div class="animatedBanner">
             <ul>
-                <li>
+                <li class="first">
                     <img src="img/dotAqua.png" alt="">
                     <span>Frontend Developer</span> 
                 </li>
-                <li>
+                <li class="first">
                     <img src="img/dotAqua.png" alt="">
                     <span>Based in Karlsruhe</span> 
                 </li>
-                <li>
+                <li class="first">
                     <img src="img/dotAqua.png" alt="">
                     <span>Open to work</span> 
                 </li>
-                <li>
+                <li class="first">
                     <img src="img/dotAqua.png" alt="">
                     <span>Available for remote work</span> 
                 </li>  
-                <li>
+                <li class="second">
                     <img src="img/dotAqua.png" alt="">
                     <span>Frontend Developer</span> 
                 </li>
-                <li>
+                <li class="second">
                     <img src="img/dotAqua.png" alt="">
                     <span>Based in Karlsruhe</span> 
                 </li>
-                <li>
+                <li class="second">
                     <img src="img/dotAqua.png" alt="">
                     <span>Open to work</span> 
                 </li>
-                <li>
+                <li class="second">
                     <img src="img/dotAqua.png" alt="">
                     <span>Available for remote work</span> 
                 </li>  

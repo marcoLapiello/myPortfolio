@@ -11,7 +11,7 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 })
 export class HeaderComponent {
   language = "english";
-  showModal = true;
+  showModal = false;
 
   switchLanguage() {
     if (this.language === "english") {

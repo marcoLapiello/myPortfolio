@@ -10,7 +10,7 @@
 body {
     height: 100dvh;
     background-color: rgb(28, 28, 28);
-   
+
 }
 
 button {
@@ -22,9 +22,11 @@ button {
     font-size: 18;
     background: none;
     border: 1px solid white;
-    border-radius: 100px;
+    border-radius: 100px;   
+}
 
-    &:hover {
+@media (hover: hover) {
+    button:hover {
         cursor: pointer;
         color: #3DCFB6;
         border: 1px solid #3DCFB6;
@@ -35,9 +37,9 @@ button {
 
         @keyframes infiniteSlide {
             0% {
-                transform: translateX( 0%);
+                transform: translateX(0%);
             }
-                
+
             25% {
                 transform: translateX(+10%);
 
