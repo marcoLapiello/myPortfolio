@@ -9,7 +9,12 @@ import { ScrollAndLinkService } from '../../scroll-and-links.service';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
+  emailAddress = "marcolapiello@gmail.com";
   constructor(private scrollAndLinkService: ScrollAndLinkService) {}
+
+  sendEmail() {
+    window.location.href = "mailto:${emailAddress}"
+  }
 
   scrollToSection(sectionId:string): void {
     this.scrollAndLinkService.scrollToSection(sectionId);
