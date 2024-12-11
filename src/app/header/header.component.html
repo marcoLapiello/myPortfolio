@@ -15,4 +15,12 @@
       </div>
     </div>
   </nav>
+
+  <div class="responsiveLayout">
+    <img class="logo" src="img/logo.png" alt="" />
+    <img (click)="openCloseModal()" class="menuIcon" src="img/hamburgerMenu.png" alt="">
+    @if (showModal === true) {
+      <app-dropdown-menu (close)="closeModal()"></app-dropdown-menu>
+    }
+  </div>
 </header>

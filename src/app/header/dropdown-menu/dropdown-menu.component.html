@@ -1,0 +1,21 @@
+<div class="modal-overlay" (click)="closeModal()"></div>
+<nav>
+  <a (click)="closeModal()" href="#aboutMe"
+    ><div class="dot"></div>
+    About me</a
+  >
+  <a (click)="closeModal()" href="#skills"
+    ><div class="dot"></div>
+    Skills</a
+  >
+  <a (click)="closeModal()" href="#portfolio"
+    ><div class="dot"></div>
+    Projects</a
+  >
+  <div
+    [ngClass]="
+      language === 'english' ? 'switchLanguageDefault' : 'switchLanguageGerman'
+    "
+    (click)="switchLanguage()"
+  ></div>
+</nav>
