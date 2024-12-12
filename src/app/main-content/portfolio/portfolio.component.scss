@@ -9,6 +9,10 @@ section {
         padding: 0px 96px;
         padding-bottom: 16px;
 
+        @media(max-width:1400px){
+            padding: 0% 5%;
+        }
+
         .linksContainer {
             display: flex;
             flex-direction: column;
@@ -19,6 +23,10 @@ section {
                 font-family: 'Karla';
                 font-weight: 700;
                 font-size: 24px;
+
+                @media(max-width:650px){
+                    font-size: 18px;
+                }
             }
 
             h2 {
@@ -26,6 +34,10 @@ section {
                 font-family: 'Fira Code';
                 font-weight: 700;
                 font-size: 64px;
+
+                @media(max-width:650px){
+                    font-size: 56px;
+                }
             }
 
             p {
@@ -34,11 +46,20 @@ section {
                 font-family: 'Karla';
                 font-weight: 400;
                 font-size: 18px;
+
+                @media(max-width:650px){
+                    width: 100%;
+                    font-size: 16px;
+                }
             }
 
             .projectsContainer {
                 width: 880px;
                 border-bottom: 1px solid rgba(61, 207, 182, 1);
+
+                @media(max-width:1400px){
+                    width: 100%;
+                }
 
 
                 .singleProject {
@@ -49,32 +70,50 @@ section {
                     position: relative;
                     transition: all 150ms ease-in;
 
-                    &:hover {
-                        cursor: pointer;
-                        background-color: rgba(61, 207, 182, 0.3);
+                    @media(max-width:850px){
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 10px;
+                        padding: 32px 0px;
+                    }
 
-                        h3 > img{
-                            opacity: 1;
+                    @media(hover: hover){
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgba(61, 207, 182, 0.3);
+    
+                            h3 > img{
+                                opacity: 1;
+                            }
+                        }
+    
+                        @media(min-width:1400px){
+                            &:first-child:hover {
+                                .projectImgTop {
+                                    display: block;
+                                    opacity: 1;
+                                }
+                            }
+        
+                            &:last-child:hover {
+                                .projectImgBottom {
+                                    display: block;
+                                    opacity: 1;
+                                }
+                            }
+        
+                            &:not(:first-child):not(:last-child):hover {
+                                .projectImgMiddle {
+                                    display: block;
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
 
-                    &:first-child:hover {
-                        .projectImgTop {
-                            opacity: 1;
-                        }
-                    }
+                    
 
-                    &:last-child:hover {
-                        .projectImgBottom {
-                            opacity: 1;
-                        }
-                    }
-
-                    &:not(:first-child):not(:last-child):hover {
-                        .projectImgMiddle {
-                            opacity: 1;
-                        }
-                    }
+                    
 
                     h3 {
                         color: white;
@@ -99,6 +138,10 @@ section {
                         align-items: center;
                         text-align: right;
 
+                        @media(max-width:850px){
+                            text-align: left;
+                        }
+
                         span {
                             color: rgba(61, 207, 182, 1);
                             font-family: 'Karla';
@@ -108,6 +151,7 @@ section {
                     }
 
                     .projectImgTop {
+                        display: none;
                         position: absolute;
                         top: 0;
                         left: calc(100% + 72px);
@@ -116,6 +160,7 @@ section {
                     }
 
                     .projectImgBottom {
+                        display: none;
                         position: absolute;
                         bottom: -4px;
                         left: calc(100% + 72px);
@@ -124,6 +169,7 @@ section {
                     }
 
                     .projectImgMiddle {
+                        display: none;
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
