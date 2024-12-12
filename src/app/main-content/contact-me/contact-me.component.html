@@ -15,52 +15,98 @@
       </div>
     </div>
 
-    <form (ngSubmit)="onSubmit(contactForm)" class="contactFormContainer" #contactForm="ngForm">
-        <div class="inputsWrapper">
-            <div class="inputDiv">
-                <h4>What's your name?</h4>
-                <input #name="ngModel" minlength="2" [(ngModel)]="contactData.name"  id="name" name="name" type="text" placeholder="Your name goes here" required>
-                <div class="errorContainer">
-                    @if (!name.valid && name.touched) {
-                        <span>Oops! it seems your name is missing </span>
-                    }
-                </div>
+    <form
+      (ngSubmit)="onSubmit(contactForm)"
+      class="contactFormContainer"
+      #contactForm="ngForm"
+    >
+      <div class="inputsWrapper">
+        <div class="inputDiv">
+          <h4>What's your name?</h4>
+          <div class="inputErrorWrapper">
+            <input
+              #name="ngModel"
+              minlength="2"
+              [(ngModel)]="contactData.name"
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name goes here"
+              required
+            />
+            <div class="errorContainer">
+              @if (!name.valid && name.touched) {
+              <span>Oops! it seems your name is missing </span>
+              }
             </div>
-            <div class="inputDiv">
-                <h4>What's your email?</h4>
-                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <div class="errorContainer">
-                    @if (!email.valid && email.touched) {
-                        <span>Hoppla! your email is required</span>
-                    }
-                </div>
-            </div>
-            <div class="inputDiv">
-                <h4>How can I help you?</h4>
-                <input #message="ngModel" minlength="5" [(ngModel)]="contactData.message" id="message" name="message" type="text" placeholder="Hello Marco, I am interested in..." required>
-                <div class="errorContainer">
-                    @if (!message.valid && message.touched) {
-                        <span>What do you need to develop?</span>
-                    }
-                </div>
-               
-            </div>
+          </div>
         </div>
-        
+        <div class="inputDiv">
+          <h4>What's your email?</h4>
+          <div class="inputErrorWrapper">
+            <input
+              #email="ngModel"
+              [(ngModel)]="contactData.email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="youremail@email.com"
+              required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            />
+            <div class="errorContainer">
+              @if (!email.valid && email.touched) {
+              <span>Hoppla! your email is required</span>
+              }
+            </div>
+          </div>
+        </div>
+        <div class="inputDiv">
+          <h4>How can I help you?</h4>
+          <div class="inputErrorWrapper">
+            <input
+              #message="ngModel"
+              minlength="5"
+              [(ngModel)]="contactData.message"
+              id="message"
+              name="message"
+              type="text"
+              placeholder="Hello Marco, I am interested in..."
+              required
+            />
+            <div class="errorContainer">
+              @if (!message.valid && message.touched) {
+              <span>What do you need to develop?</span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="submitContainer">
-            <div class="privPolicyContainer">
-                <div class="checkMark" [ngClass]="isChecked ? 'checked' : '' " (click)="checkUncheck()"></div>
-                <p>I've read the <span class="privPolicyLink">privacy policy</span> and agree to the processing of my data as outlined</p>
-                <div class="errorPrivPolicy">
-                    @if (!isChecked && showPrivacyPolicyError) {
-                        <span>Please accept the privacy policy.</span>
-                    }
-                </div>
-            </div>
-            
-            <button><div>Say Hello ;&#41;</div></button>
+      <div class="submitContainer">
+        <div class="privPolicyContainer">
+          <div
+            class="checkMark"
+            [ngClass]="isChecked ? 'checked' : ''"
+            (click)="checkUncheck()"
+          ></div>
+
+          <p>
+            I've read the
+            <span [routerLink]="['/legalNotice']" class="privPolicyLink"
+              >privacy policy</span
+            >
+            and agree to the processing of my data as outlined
+          </p>
+          <div class="errorPrivPolicy">
+            @if (!isChecked && showPrivacyPolicyError) {
+            <span>Please accept the privacy policy.</span>
+            }
+          </div>
         </div>
+
+        <button><div>Say Hello ;&#41;</div></button>
+      </div>
     </form>
   </div>
 </section>

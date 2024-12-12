@@ -10,11 +10,23 @@ section {
         display: flex;
         gap: 64px;
 
+        @media(max-width:1400px){
+            padding: 100px 5%;
+        }
+
+        @media(max-width:1000px){
+            flex-direction: column;
+        }
+
         .contactMeText {
             width: 568px;
             display: flex;
             flex-direction: column;
             gap: 40px;
+
+            @media(max-width:650px){
+                width: 100%;
+            }
 
             .highlineContainer {
                 display: flex;
@@ -26,6 +38,10 @@ section {
                     font-family: 'Karla';
                     font-weight: 500;
                     font-size: 24px;
+
+                    @media(max-width:650px){
+                        font-size: 18px;
+                    }
                 }
 
                 h2 {
@@ -34,6 +50,14 @@ section {
                     font-weight: 700;
                     font-size: 64px;
                     line-height: 64px;
+
+                    @media(max-width:650px){
+                        font-size: 56px;
+                    }
+
+                    @media(max-width:390px){
+                        font-size: 48px;
+                    }
                 }
             }
 
@@ -47,6 +71,10 @@ section {
                     font-family: 'Fira Code';
                     font-weight: 700;
                     font-size: 24px;
+
+                    @media(max-width:650px){
+                        font-size: 20px;
+                    }
                 }
 
                 p {
@@ -75,8 +103,12 @@ section {
             flex-direction: column;
             gap: 40px;
 
+            @media(max-width:1000px){
+                width: 100%;
+            }
+
             .inputDiv {
-                padding: 32px;
+                padding: 32px 32px 16px 32px;
                 border-bottom: 1px solid rgba(61, 207, 182, 1);
                 display: flex;
                 flex-direction: column;
@@ -89,40 +121,94 @@ section {
                     font-family: 'Fira Code';
                     font-weight: 500;
                     font-size: 24px;
-                }
 
-                input {
-                    color: rgba(255, 255, 255, 0.8);
-                    font-family: 'Karla';
-                    font-weight: 400;
-                    font-size: 18px;
-                    background-color: rgb(28, 28, 28);
-                    border: none;
-                    outline: none;
-
-                    &::placeholder {
-                        color: rgba(255, 255, 255, 0.8);
+                    @media(max-width:650px){
+                        font-size: 20px;
                     }
                 }
 
-
-                .errorContainer {
-                    height: 14px;
-                    // width: 100%;
-
+                .inputErrorWrapper {
+                    width: 100%;
                     display: flex;
+                    flex-direction: column;
+                    gap: 8px;
 
-                    position: absolute;
-                    top: 112px;
-
-                    span {
-                        color: rgba(236, 123, 123, 0.8);
-                        font-family: 'Fira Code';
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 14px;
+                    input {
+                        color: rgba(255, 255, 255, 0.8);
+                        font-family: 'Karla';
+                        font-weight: 400;
+                        font-size: 18px;
+                        background-color: rgb(28, 28, 28);
+                        border: none;
+                        outline: none;
+    
+                        @media(max-width:650px){
+                            font-size: 16px;
+                        }
+    
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.8);
+                        }
+                    }
+    
+    
+                    .errorContainer {
+                        height: 14px;
+                        display: flex;
+                        // position: absolute;
+                        // top: 112px;
+    
+                        @media(max-width:650px){
+                            top: 104px;
+                        }
+    
+                        span {
+                            color: rgba(236, 123, 123, 0.8);
+                            font-family: 'Fira Code';
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 14px;
+                        }
                     }
                 }
+
+                // input {
+                //     color: rgba(255, 255, 255, 0.8);
+                //     font-family: 'Karla';
+                //     font-weight: 400;
+                //     font-size: 18px;
+                //     background-color: rgb(28, 28, 28);
+                //     border: none;
+                //     outline: none;
+
+                //     @media(max-width:650px){
+                //         font-size: 16px;
+                //     }
+
+                //     &::placeholder {
+                //         color: rgba(255, 255, 255, 0.8);
+                //     }
+                // }
+
+
+                // .errorContainer {
+                //     height: 14px;
+                //     display: flex;
+                //     position: absolute;
+                //     top: 112px;
+
+                //     @media(max-width:650px){
+                //         top: 104px;
+                //     }
+
+                //     span {
+                //         color: rgba(236, 123, 123, 0.8);
+                //         font-family: 'Fira Code';
+                //         font-weight: 500;
+                //         font-size: 14px;
+                //         line-height: 14px;
+                //     }
+                // }
 
 
             }
@@ -134,30 +220,40 @@ section {
                 gap: 40px;
                 position: relative;
 
+                @media(max-width:1354px){
+                    gap: 80px;
+                }
+
                 .privPolicyContainer {
                     width: 100%;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 8px;
 
                     .checkMark {
-                        width: 24px;
+                        min-width: 24px;
                         height: 24px;
                         background-image: url('./../../../../public/img/checkMarkOutline.png');
 
-                        &:hover {
-                            cursor: pointer;
-                            background-image: url('./../../../../public/img/checkMarkOutlineHover.png');
+                        @media(hover: hover){
+                            &:hover {
+                                cursor: pointer;
+                                background-image: url('./../../../../public/img/checkMarkOutlineHover.png');
+                            }
                         }
+                        
                     }
 
                     .checked {
                         background-image: url('./../../../../public/img/CheckMarkChecked.png');
 
-                        &:hover {
-                            cursor: pointer;
-                            background-image: url('./../../../../public/img/checkMarkCheckedHover.png');
+                        @media(hover: hover){
+                            &:hover {
+                                cursor: pointer;
+                                background-image: url('./../../../../public/img/checkMarkCheckedHover.png');
+                            }
                         }
+                        
                     }
 
                     p {
@@ -183,6 +279,14 @@ section {
                         // background-color: white;
                         position: absolute;
                         top: 30px;
+
+                        @media(max-width:1354px){
+                            top: 50px;
+                        }
+
+                        @media(max-width:680px){
+                            top: 60px;
+                        }
     
                         span {
                             color: rgba(236, 123, 123, 0.8);
