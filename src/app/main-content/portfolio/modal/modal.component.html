@@ -1,45 +1,49 @@
 <div class="modal-overlay" (click)="closeModal()"></div>
 <div class="modal-content">
-  <button class="close-button" (click)="closeModal()"></button>
-
-  <div class="project-details">
-    <div class="title">
-      <span class="projectNr">0{{ projectId }}</span>
-      <h2>{{ project.title }}</h2>
-    </div>
-
-    <div class="description">
-      <h3>What is this project about?</h3>
-      <p>
-        {{ project.description }}
-      </p>
-      <div class="technologies">
-        @for (technology of project?.technologies; track $index) {
-        <div class="technologyWrapper">
-          <img [src]="project.techIconsPaths[$index]" alt="" />
-          <span>{{ technology }}</span>
+  <div class="contentWrapper">
+    <div class="project-details">
+      <div class="title">
+        <span class="projectNr">0{{ projectId }}</span>
+        <h2>{{ project.title }}</h2>
+      </div>
+  
+      <div class="description">
+        <h3>What is this project about?</h3>
+        <p>
+          {{ project.description }}
+        </p>
+        <div class="technologies">
+          @for (technology of project?.technologies; track $index) {
+          <div class="technologyWrapper">
+            <img [src]="project.techIconsPaths[$index]" alt="" />
+            <span>{{ technology }}</span>
+          </div>
+          }
         </div>
-        }
+      </div>
+  
+      <div class="linksButtonContainer">
+        <button (click)="openGitHubRepo()">
+          <span>GitHub</span>
+          <div class="arrowContainer">
+            <img src="img/arrow_forward_aqua.png" alt="" />
+          </div>
+        </button>
+        <button>
+          <span>Live Test</span>
+          <div class="arrowContainer">
+            <img src="img/arrow_forward_aqua.png" alt="" />
+          </div>
+        </button>
       </div>
     </div>
-
-    <div class="linksButtonContainer">
-      <button (click)="openGitHubRepo()">
-        <span>GitHub</span>
-        <div class="arrowContainer">
-          <img src="img/arrow_forward_aqua.png" alt="" />
-        </div>
-      </button>
-      <button>
-        <span>Live Test</span>
-        <div class="arrowContainer">
-          <img src="img/arrow_forward_aqua.png" alt="" />
-        </div>
-      </button>
-    </div>
+    <img class="projectImg" [src]="project.modalImgPath" alt="" />
   </div>
+  <button class="close-button" (click)="closeModal()"></button>
 
-  <img [src]="project.modalImgPath" alt="" />
+  
+
+  
   <button (click)="nextProject()" class="nextProjectButton">
     Next project <img src="img/arrow_forward_aqua.png" alt="" />
   </button>
