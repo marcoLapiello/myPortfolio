@@ -95,13 +95,17 @@ footer {
                     transition: all 300ms ease-in-out;
                 }
 
-                &:hover {
-                    color: rgba(61, 207, 182, 1);
-
-                    .dot{
-                        opacity: 1;
+                @media(hover:hover){
+                    &:hover {
+                        cursor: pointer;
+                        color: rgba(61, 207, 182, 1);
+    
+                        .dot{
+                            opacity: 1;
+                        }
                     }
                 }
+                
             }
         }
     }

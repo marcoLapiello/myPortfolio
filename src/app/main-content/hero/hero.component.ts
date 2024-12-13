@@ -13,7 +13,7 @@ export class HeroComponent {
   constructor(private scrollAndLinkService: ScrollAndLinkService) {}
 
   sendEmail() {
-    window.location.href = "mailto:${emailAddress}"
+    window.location.href = `mailto:${this.emailAddress}`;
   }
 
   scrollToSection(sectionId:string): void {
