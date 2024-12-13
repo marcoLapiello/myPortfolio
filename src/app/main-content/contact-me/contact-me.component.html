@@ -19,6 +19,7 @@
       (ngSubmit)="onSubmit(contactForm)"
       class="contactFormContainer"
       #contactForm="ngForm"
+      #formElement
     >
       <div class="inputsWrapper">
         <div class="inputDiv">
@@ -35,7 +36,7 @@
               required
             />
             <div class="errorContainer">
-              @if (!name.valid && name.touched) {
+              @if (!name.valid && (name.dirty || formSubmitted)) {
               <span>Oops! it seems your name is missing </span>
               }
             </div>
@@ -55,7 +56,7 @@
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             />
             <div class="errorContainer">
-              @if (!email.valid && email.touched) {
+              @if (!email.valid && (email.dirty || formSubmitted)) {
               <span>Hoppla! your email is required</span>
               }
             </div>
@@ -75,7 +76,7 @@
               required
             />
             <div class="errorContainer">
-              @if (!message.valid && message.touched) {
+              @if (!message.valid && (message.dirty || formSubmitted)) {
               <span>What do you need to develop?</span>
               }
             </div>
@@ -105,7 +106,18 @@
           </div>
         </div>
 
-        <button><div>Say Hello ;&#41;</div></button>
+        
+          @if (formSentConfirmation) {
+            
+            <div class="confirmation"><span>Your request was sent</span></div>
+             
+          } @else {
+            <button>
+              <div>Say Hello ;&#41;</div>
+            </button>
+            
+          }
+        
       </div>
     </form>
   </div>

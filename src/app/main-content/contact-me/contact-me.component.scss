@@ -10,11 +10,11 @@ section {
         display: flex;
         gap: 64px;
 
-        @media(max-width:1400px){
+        @media(max-width:1400px) {
             padding: 100px 5%;
         }
 
-        @media(max-width:1000px){
+        @media(max-width:1000px) {
             flex-direction: column;
         }
 
@@ -24,7 +24,7 @@ section {
             flex-direction: column;
             gap: 40px;
 
-            @media(max-width:650px){
+            @media(max-width:650px) {
                 width: 100%;
             }
 
@@ -39,7 +39,7 @@ section {
                     font-weight: 500;
                     font-size: 24px;
 
-                    @media(max-width:650px){
+                    @media(max-width:650px) {
                         font-size: 18px;
                     }
                 }
@@ -51,11 +51,11 @@ section {
                     font-size: 64px;
                     line-height: 64px;
 
-                    @media(max-width:650px){
+                    @media(max-width:650px) {
                         font-size: 56px;
                     }
 
-                    @media(max-width:390px){
+                    @media(max-width:390px) {
                         font-size: 48px;
                     }
                 }
@@ -72,7 +72,7 @@ section {
                     font-weight: 700;
                     font-size: 24px;
 
-                    @media(max-width:650px){
+                    @media(max-width:650px) {
                         font-size: 20px;
                     }
                 }
@@ -103,7 +103,7 @@ section {
             flex-direction: column;
             gap: 40px;
 
-            @media(max-width:1000px){
+            @media(max-width:1000px) {
                 width: 100%;
             }
 
@@ -122,7 +122,7 @@ section {
                     font-weight: 500;
                     font-size: 24px;
 
-                    @media(max-width:650px){
+                    @media(max-width:650px) {
                         font-size: 20px;
                     }
                 }
@@ -141,27 +141,25 @@ section {
                         background-color: rgb(28, 28, 28);
                         border: none;
                         outline: none;
-    
-                        @media(max-width:650px){
+
+                        @media(max-width:650px) {
                             font-size: 16px;
                         }
-    
+
                         &::placeholder {
                             color: rgba(255, 255, 255, 0.8);
                         }
                     }
-    
-    
+
+
                     .errorContainer {
                         height: 14px;
                         display: flex;
-                        // position: absolute;
-                        // top: 112px;
-    
-                        @media(max-width:650px){
+
+                        @media(max-width:650px) {
                             top: 104px;
                         }
-    
+
                         span {
                             color: rgba(236, 123, 123, 0.8);
                             font-family: 'Fira Code';
@@ -171,46 +169,6 @@ section {
                         }
                     }
                 }
-
-                // input {
-                //     color: rgba(255, 255, 255, 0.8);
-                //     font-family: 'Karla';
-                //     font-weight: 400;
-                //     font-size: 18px;
-                //     background-color: rgb(28, 28, 28);
-                //     border: none;
-                //     outline: none;
-
-                //     @media(max-width:650px){
-                //         font-size: 16px;
-                //     }
-
-                //     &::placeholder {
-                //         color: rgba(255, 255, 255, 0.8);
-                //     }
-                // }
-
-
-                // .errorContainer {
-                //     height: 14px;
-                //     display: flex;
-                //     position: absolute;
-                //     top: 112px;
-
-                //     @media(max-width:650px){
-                //         top: 104px;
-                //     }
-
-                //     span {
-                //         color: rgba(236, 123, 123, 0.8);
-                //         font-family: 'Fira Code';
-                //         font-weight: 500;
-                //         font-size: 14px;
-                //         line-height: 14px;
-                //     }
-                // }
-
-
             }
 
             .submitContainer {
@@ -220,7 +178,7 @@ section {
                 gap: 40px;
                 position: relative;
 
-                @media(max-width:1354px){
+                @media(max-width:1354px) {
                     gap: 80px;
                 }
 
@@ -235,25 +193,25 @@ section {
                         height: 24px;
                         background-image: url('./../../../../public/img/checkMarkOutline.png');
 
-                        @media(hover: hover){
+                        @media(hover: hover) {
                             &:hover {
                                 cursor: pointer;
                                 background-image: url('./../../../../public/img/checkMarkOutlineHover.png');
                             }
                         }
-                        
+
                     }
 
                     .checked {
                         background-image: url('./../../../../public/img/CheckMarkChecked.png');
 
-                        @media(hover: hover){
+                        @media(hover: hover) {
                             &:hover {
                                 cursor: pointer;
                                 background-image: url('./../../../../public/img/checkMarkCheckedHover.png');
                             }
                         }
-                        
+
                     }
 
                     p {
@@ -273,21 +231,18 @@ section {
 
                     .errorPrivPolicy {
                         height: 14px;
-                        // width: 200px;
-    
                         display: flex;
-                        // background-color: white;
                         position: absolute;
                         top: 30px;
 
-                        @media(max-width:1354px){
+                        @media(max-width:1354px) {
                             top: 50px;
                         }
 
-                        @media(max-width:680px){
+                        @media(max-width:680px) {
                             top: 60px;
                         }
-    
+
                         span {
                             color: rgba(236, 123, 123, 0.8);
                             font-family: 'Fira Code';
@@ -302,3 +257,19 @@ section {
         }
     }
 }
+
+.confirmation {
+    height: 48px;
+    padding: 0px 24px;
+    color: white;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 18;
+    background: rgba(61, 207, 182, 0.3);
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
