@@ -47,12 +47,14 @@ export class PortfolioComponent {
   ]
 
   openModal(project: {}, projectId: number): void {
+    document.body.style.overflow = 'hidden';
     this.selectedProject = project;
     this.selectedProjectId = projectId + 1;
     this.showModal = true;
   }
 
   closeModal(): void {
+    document.body.style.overflow = '';
     this.showModal = false;
   }
 
