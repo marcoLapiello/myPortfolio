@@ -1,11 +1,10 @@
 <section id="portfolio">
   <div class="sectionWrapper">
     <div class="linksContainer">
-      <h4>Portfolio</h4>
-      <h2>Featured Projects</h2>
+      <h4>{{ 'PORTFOLIO.TITLE' | translate }}</h4>
+      <h2>{{ 'PORTFOLIO.FEATURED_PROJECTS' | translate }}</h2>
       <p>
-        Explore a selection of my work here - Interact with projects to see my
-        skills in action.
+        {{ 'PORTFOLIO.DESCRIPTION' | translate }}
       </p>
       @if (showModal === true) {
         <app-modal [allProjects]="projects" [project]="selectedProject" [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>

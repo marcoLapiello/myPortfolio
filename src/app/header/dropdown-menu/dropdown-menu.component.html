@@ -2,15 +2,15 @@
 <nav>
   <a (click)="closeModal()" href="#aboutMe"
     ><div class="dot"></div>
-    About me</a
+    {{ 'NAV.ABOUT_ME' | translate }}</a
   >
   <a (click)="closeModal()" href="#skills"
     ><div class="dot"></div>
-    Skills</a
+    {{ 'NAV.SKILLS' | translate }}</a
   >
   <a (click)="closeModal()" href="#portfolio"
     ><div class="dot"></div>
-    Projects</a
+    {{ 'NAV.PROJECTS' | translate }}</a
   >
   <div
     [ngClass]="

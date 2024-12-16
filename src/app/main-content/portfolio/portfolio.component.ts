@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ModalComponent } from './modal/modal.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ModalComponent],
+  imports: [ModalComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  translate = inject(TranslationService);
   showModal = false;
   selectedProject = {};
   selectedProjectId!: number;

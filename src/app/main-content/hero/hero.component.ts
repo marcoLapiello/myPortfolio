@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ScrollAndLinkService } from '../../scroll-and-links.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
   emailAddress = "marcolapiello@gmail.com";
   constructor(private scrollAndLinkService: ScrollAndLinkService) {}
+
+  translate = inject(TranslationService);
 
   sendEmail() {
     window.location.href = `mailto:${this.emailAddress}`;

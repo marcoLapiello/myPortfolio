@@ -1,30 +1,26 @@
 <section id="skills">
   <div class="sectionWrapper">
-        <span>Technologies</span>
+        <span>{{ 'SKILLS.TECHNOLOGIES' | translate }}</span>
         <div class="underWrapper">
             <div class="skillsDescription">
             
 
                 <div class="descriptionHolder">
-                    <h2>Skill Set</h2>
+                    <h2>{{ 'SKILLS.TITLE' | translate }}</h2>
     
                     <div class="textWrapper">
                         <p>
-                            My journey has involved working on diverse projects, employing a
-                            range of frontend technologies and concepts. I am open to embracing
-                            new technologies and methodologies to continously enhance my skills
-                            and stay ahead in the ever-evolving landscape of web development.
+                            {{ 'SKILLS.INTRO' | translate }}
                         </p>
     
-                        <h3>You need <span>another skill?</span></h3>
+                        <h3>{{ 'SKILLS.NEED' | translate }}<span> {{ 'SKILLS.ANOTHER_SKILL' | translate }}</span></h3>
     
                         <span
-                            >Feel free to contact me. I look forward to expanding on my previous
-                            knowledge.</span
+                            >{{ 'SKILLS.CONTACT' | translate }}</span
                         >
                     </div>
     
-                    <button (click)="scrollToSection('contactMe')"><div>Let's talk</div></button>
+                    <button (click)="scrollToSection('contactMe')"><div>{{ 'SKILLS.LET_TALK' | translate }}</div></button>
                 </div>
     
                 

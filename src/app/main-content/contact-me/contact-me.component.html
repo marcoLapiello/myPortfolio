@@ -2,16 +2,15 @@
   <div class="wrapper">
     <div class="contactMeText">
       <div class="highlineContainer">
-        <h4>Contact me</h4>
-        <h2>Let's work together</h2>
+        <h4>{{ 'CONTACT_ME.TITLE' | translate }}</h4>
+        <h2>{{ 'CONTACT_ME.SUBTITLE' | translate }}</h2>
       </div>
       <div class="callToAction">
-        <h3>Got a problem to solve?</h3>
+        <h3>{{ 'CONTACT_ME.QUESTION' | translate }}</h3>
         <p>
-          Contact me through this form, I am interested in hearing from you,
-          knowing your ideas and contributing to your projects with my work.
+          {{ 'CONTACT_ME.INTRO' | translate }}
         </p>
-        <p>Need a Frontend developer? <span>Let's talk!</span></p>
+        <p>{{ 'CONTACT_ME.NEED_DEV' | translate }} <span>{{ 'CONTACT_ME.LETS_TALK' | translate }}</span></p>
       </div>
     </div>
 
@@ -23,7 +22,7 @@
     >
       <div class="inputsWrapper">
         <div class="inputDiv">
-          <h4>What's your name?</h4>
+          <h4>{{ 'CONTACT_ME.NAME_LABEL' | translate }}</h4>
           <div class="inputErrorWrapper">
             <input
               #name="ngModel"
@@ -32,18 +31,18 @@
               id="name"
               name="name"
               type="text"
-              placeholder="Your name goes here"
+              placeholder="{{'CONTACT_ME.PLACEHOLDER_NAME' | translate}}"
               required
             />
             <div class="errorContainer">
               @if (!name.valid && (name.dirty || formSubmitted)) {
-              <span>Oops! it seems your name is missing </span>
+              <span>{{ 'CONTACT_ME.ERROR_NAME' | translate }}</span>
               }
             </div>
           </div>
         </div>
         <div class="inputDiv">
-          <h4>What's your email?</h4>
+          <h4>{{ 'CONTACT_ME.EMAIL_LABEL' | translate }}</h4>
           <div class="inputErrorWrapper">
             <input
               #email="ngModel"
@@ -51,19 +50,19 @@
               id="email"
               name="email"
               type="email"
-              placeholder="youremail@email.com"
+              placeholder="{{'CONTACT_ME.PLACEHOLDER_EMAIL' | translate}}"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             />
             <div class="errorContainer">
               @if (!email.valid && (email.dirty || formSubmitted)) {
-              <span>Hoppla! your email is required</span>
+              <span>{{ 'CONTACT_ME.ERROR_EMAIL' | translate }}</span>
               }
             </div>
           </div>
         </div>
         <div class="inputDiv">
-          <h4>How can I help you?</h4>
+          <h4>{{ 'CONTACT_ME.MESSAGE_LABEL' | translate }}</h4>
           <div class="inputErrorWrapper">
             <input
               #message="ngModel"
@@ -72,12 +71,12 @@
               id="message"
               name="message"
               type="text"
-              placeholder="Hello Marco, I am interested in..."
+              placeholder="{{'CONTACT_ME.PLACEHOLDER_MESSAGE' | translate}}"
               required
             />
             <div class="errorContainer">
               @if (!message.valid && (message.dirty || formSubmitted)) {
-              <span>What do you need to develop?</span>
+              <span>{{ 'CONTACT_ME.ERROR_MESSAGE' | translate }}</span>
               }
             </div>
           </div>
@@ -93,15 +92,15 @@
           ></div>
 
           <p>
-            I've read the
+            {{ 'CONTACT_ME.I_HAVE_READ' | translate }}
             <span [routerLink]="['/legalNotice']" class="privPolicyLink"
-              >privacy policy</span
+              > {{ 'CONTACT_ME.PRIVACY_POLICY' | translate }}</span
             >
-            and agree to the processing of my data as outlined
+            {{ 'CONTACT_ME.AND_AGREE' | translate }}
           </p>
           <div class="errorPrivPolicy">
             @if (!isChecked && showPrivacyPolicyError) {
-            <span>Please accept the privacy policy.</span>
+            <span>{{ 'CONTACT_ME.PRIVACY_POLICY_ERROR' | translate }}</span>
             }
           </div>
         </div>
@@ -109,11 +108,11 @@
         
           @if (formSentConfirmation) {
             
-            <div class="confirmation"><span>Your request was sent</span></div>
+            <div class="confirmation"><span>{{ 'CONTACT_ME.CONFIRMATION' | translate }}</span></div>
              
           } @else {
             <button>
-              <div>Say Hello ;&#41;</div>
+              <div>{{ 'CONTACT_ME.BUTTON' | translate }}</div>
             </button>
             
           }

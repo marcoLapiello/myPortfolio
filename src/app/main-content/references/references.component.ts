@@ -1,12 +1,15 @@
-import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-references',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+  translate = inject(TranslationService);
 
   references = [
     {

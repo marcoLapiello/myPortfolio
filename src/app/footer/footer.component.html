@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class="spanContainer">
-        <span>Web Developer</span>
-        <span>Karlsruhe Germany</span>
+        <span>{{ 'FOOTER.DEVELOPER' | translate }}</span>
+        <span>{{ 'FOOTER.LOCATION' | translate }}</span>
       </div>
     </div>
 
@@ -20,8 +20,8 @@
       <a href="https://github.com/marcoLapiello"><div class="dot"></div>GitHub</a>
       <a href="https://www.linkedin.com/in/marco-lapiello/"><div class="dot"></div>LinkedIn</a>
       <a (click)="sendEmail()"><div class="dot"></div>Email</a>
-      <a [routerLink] = "['/legalNotice']" href=""><div class="dot"></div>Privacy Notice</a>
-      <a href=""><div class="dot"></div>Imprint</a>
+      <a [routerLink] = "['/legalNotice']" href=""><div class="dot"></div>{{ 'FOOTER.LINKS.PRIVACY_NOTICE' | translate }}</a>
+      <a href=""><div class="dot"></div>{{ 'FOOTER.LINKS.IMPRINT' | translate }}</a>
     </nav>
   </div>
 </footer>

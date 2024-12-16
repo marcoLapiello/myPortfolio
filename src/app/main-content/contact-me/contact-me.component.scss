@@ -227,6 +227,12 @@ section {
                         font-family: 'Fira Code';
                         font-weight: 400;
                         font-size: 15px;
+
+                        @media (hover: hover){
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
                     }
 
                     .errorPrivPolicy {
