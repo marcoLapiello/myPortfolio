@@ -7,7 +7,7 @@
         {{ 'PORTFOLIO.DESCRIPTION' | translate }}
       </p>
       @if (showModal === true) {
-        <app-modal [allProjects]="projects" [project]="selectedProject" [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
+        <app-modal [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
       }
       
       <div class="projectsContainer">

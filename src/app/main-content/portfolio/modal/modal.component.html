@@ -4,18 +4,18 @@
     <div class="project-details">
       <div class="title">
         <span class="projectNr">0{{ projectId }}</span>
-        <h2>{{ project.title }}</h2>
+        <h2>{{ project!.title }}</h2>
       </div>
   
       <div class="description">
-        <h3>What is this project about?</h3>
+        <h3>{{ 'PORTFOLIO.MODAL.PROJECT_ABOUT' | translate }}</h3>
         <p>
-          {{ project.description }}
+          {{ description }}
         </p>
         <div class="technologies">
           @for (technology of project?.technologies; track $index) {
           <div class="technologyWrapper">
-            <img [src]="project.techIconsPaths[$index]" alt="" />
+            <img [src]="project!.techIconsPaths[$index]" alt="" />
             <span>{{ technology }}</span>
           </div>
           }
@@ -37,7 +37,7 @@
         </button>
       </div>
     </div>
-    <img class="projectImg" [src]="project.modalImgPath" alt="" />
+    <img class="projectImg" [src]="project!.modalImgPath" alt="" />
   </div>
   <button class="close-button" (click)="closeModal()"></button>
 

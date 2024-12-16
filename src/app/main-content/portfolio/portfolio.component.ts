@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ModalComponent } from './modal/modal.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../translation.service';
+import { ProjectsService } from './projects.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,44 +11,15 @@ import { TranslationService } from '../../translation.service';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  projects: any[] = [];
   translate = inject(TranslationService);
   showModal = false;
   selectedProject = {};
   selectedProjectId!: number;
 
-  projects = [
-    {
-      title: "Join",
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      imgPath: "img/joinImg.png",
-      modalImgPath: "img/joinImgBig.png",
-      imgStyleClass: "projectImgTop",
-      techIconsPaths: [
-        'img/modal_technology_icons/javaScript.png',
-        'img/modal_technology_icons/firebase.png',
-        'img/modal_technology_icons/html.png',
-        'img/modal_technology_icons/css.png',
-      ],
-      gitHubLink: "https://github.com/marcoLapiello/Developer-Akademie-Join",
-      // liveTestLink:
-    },
-    {
-      title: "El Pollo Loco",
-      description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      technologies: ['JavaScript', 'HTML', 'CSS'],
-      imgPath: "img/elPolloImg.png",
-      modalImgPath: "img/elPolloImgBig.png",
-      imgStyleClass: "projectImgBottom",
-      techIconsPaths: [
-        'img/modal_technology_icons/javaScript.png',
-        'img/modal_technology_icons/html.png',
-        'img/modal_technology_icons/css.png',
-      ],
-      gitHubLink: "https://github.com/marcoLapiello/El-pollo-loco---javascript-game",
-      // liveTestLink:
-    },
-  ]
+  constructor(private projectsService: ProjectsService){
+    this.projects = this.projectsService.getProjects();
+  }
 
   openModal(project: {}, projectId: number): void {
     document.body.style.overflow = 'hidden';

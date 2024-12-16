@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule} from '@ngx-translate/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-header',
@@ -11,24 +12,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  language = "english";
+  currentLanguage = 'en'; // Stato locale sincronizzato con il servizio
   showModal = false;
 
-  constructor (private translate: TranslateService){
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  constructor (private translationService: TranslationService){
+    // Sottoscrivi al servizio per sincronizzare lo stato della lingua
+    this.translationService.currentLanguage$.subscribe((language) => {
+      this.currentLanguage = language;
+    });
   }
 
-  switchLanguage() {
-    if (this.language === "english") {
-      this.language = "german";
-      this.translate.use('de');
-      
-    } else {
-      this.language = "english";
-      this.translate.use('en');
-    }
-    
+  // Metodo per cambiare lingua utilizzando il servizio
+  switchLanguage(): void {
+    this.translationService.switchLanguage();
   }
 
   openCloseModal(): void {

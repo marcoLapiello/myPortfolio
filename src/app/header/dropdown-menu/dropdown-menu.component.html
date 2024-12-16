@@ -14,7 +14,7 @@
   >
   <div
     [ngClass]="
-      language === 'english' ? 'switchLanguageDefault' : 'switchLanguageGerman'
+      currentLanguage === 'en' ? 'switchLanguageDefault' : 'switchLanguageGerman'
     "
     (click)="switchLanguage()"
   ></div>

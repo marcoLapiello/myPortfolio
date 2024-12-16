@@ -31,7 +31,11 @@
   "PORTFOLIO": {
     "TITLE": "Portfolio",
     "FEATURED_PROJECTS": "Featured Projects",
-    "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "MODAL": {
+      "PROJECT_ABOUT": "What is this project about?",
+      "NEXT_PROJECT": "Next project"
+    }
   },
   "REFERENCES": {
     "TITLE": "What my colleagues say about me"

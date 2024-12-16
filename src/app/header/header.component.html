@@ -1,7 +1,7 @@
 <header id="header">
   <nav>
     <div class="navLeft">
-      <div [ngClass]="language === 'english' ? 'switchLanguageDefault' : 'switchLanguageGerman' " (click)="switchLanguage()"></div>
+      <div [ngClass]="currentLanguage === 'en' ? 'switchLanguageDefault' : 'switchLanguageGerman' " (click)="switchLanguage()"></div>
       <a href="#aboutMe"><div class="dot"></div>{{ 'NAV.ABOUT_ME' | translate }}</a>
       <a href="#skills"><div class="dot"></div>{{ 'NAV.SKILLS' | translate }}</a>
       <a href="#portfolio"><div class="dot"></div>{{ 'NAV.PROJECTS' | translate }}</a>
