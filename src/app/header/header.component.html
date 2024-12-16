@@ -2,9 +2,9 @@
   <nav>
     <div class="navLeft">
       <div [ngClass]="language === 'english' ? 'switchLanguageDefault' : 'switchLanguageGerman' " (click)="switchLanguage()"></div>
-      <a href="#aboutMe"><div class="dot"></div>About me</a>
-      <a href="#skills"><div class="dot"></div>Skills</a>
-      <a href="#portfolio"><div class="dot"></div>Projects</a>
+      <a href="#aboutMe"><div class="dot"></div>{{ 'NAV.ABOUT_ME' | translate }}</a>
+      <a href="#skills"><div class="dot"></div>{{ 'NAV.SKILLS' | translate }}</a>
+      <a href="#portfolio"><div class="dot"></div>{{ 'NAV.PROJECTS' | translate }}</a>
     </div>
 
     <div class="navRight">
