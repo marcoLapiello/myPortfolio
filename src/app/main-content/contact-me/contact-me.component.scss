@@ -221,42 +221,40 @@ section {
                         font-size: 15px;
                     }
 
-                    .privPolicyLink {
-                        width: 456px;
-                        color: rgba(61, 207, 182, 1);
-                        font-family: 'Fira Code';
-                        font-weight: 400;
-                        font-size: 15px;
+                    .textWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
 
-                        @media (hover: hover){
-                            &:hover{
-                                cursor: pointer;
+                        .privPolicyLink {
+                            width: 456px;
+                            color: rgba(61, 207, 182, 1);
+                            font-family: 'Fira Code';
+                            font-weight: 400;
+                            font-size: 15px;
+    
+                            @media (hover: hover){
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+    
+                        .errorPrivPolicy {
+                            height: 14px;
+                            display: flex;
+    
+                            span {
+                                color: rgba(236, 123, 123, 0.8);
+                                font-family: 'Fira Code';
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 14px;
                             }
                         }
                     }
 
-                    .errorPrivPolicy {
-                        height: 14px;
-                        display: flex;
-                        position: absolute;
-                        top: 30px;
-
-                        @media(max-width:1354px) {
-                            top: 50px;
-                        }
-
-                        @media(max-width:680px) {
-                            top: 60px;
-                        }
-
-                        span {
-                            color: rgba(236, 123, 123, 0.8);
-                            font-family: 'Fira Code';
-                            font-weight: 500;
-                            font-size: 14px;
-                            line-height: 14px;
-                        }
-                    }
+                    
                 }
 
             }

@@ -91,31 +91,34 @@
             (click)="checkUncheck()"
           ></div>
 
-          <p>
-            {{ 'CONTACT_ME.I_HAVE_READ' | translate }}
-            <span [routerLink]="['/legalNotice']" class="privPolicyLink"
-              > {{ 'CONTACT_ME.PRIVACY_POLICY' | translate }}</span
-            >
-            {{ 'CONTACT_ME.AND_AGREE' | translate }}
-          </p>
-          <div class="errorPrivPolicy">
-            @if (!isChecked && showPrivacyPolicyError) {
-            <span>{{ 'CONTACT_ME.PRIVACY_POLICY_ERROR' | translate }}</span>
-            }
+          <div class="textWrapper">
+            <p>
+              {{ 'CONTACT_ME.I_HAVE_READ' | translate }}
+              <span [routerLink]="['/legalNotice']" class="privPolicyLink"
+                > {{ 'CONTACT_ME.PRIVACY_POLICY' | translate }}</span
+              >
+              {{ 'CONTACT_ME.AND_AGREE' | translate }}
+            </p>
+            <div class="errorPrivPolicy">
+              @if (!isChecked && showPrivacyPolicyError) {
+              <span>{{ 'CONTACT_ME.PRIVACY_POLICY_ERROR' | translate }}</span>
+              }
+            </div>
           </div>
+          
         </div>
 
         
-          @if (formSentConfirmation) {
+        @if (formSentConfirmation) {
+          
+          <div class="confirmation"><span>{{ 'CONTACT_ME.CONFIRMATION' | translate }}</span></div>
             
-            <div class="confirmation"><span>{{ 'CONTACT_ME.CONFIRMATION' | translate }}</span></div>
-             
-          } @else {
-            <button>
-              <div>{{ 'CONTACT_ME.BUTTON' | translate }}</div>
-            </button>
-            
-          }
+        } @else {
+          <button>
+            <div>{{ 'CONTACT_ME.BUTTON' | translate }}</div>
+          </button>
+          
+        }
         
       </div>
     </form>
