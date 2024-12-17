@@ -25,4 +25,12 @@ export class FooterComponent {
     window.location.href = `mailto:${this.emailAddress}`;
   }
 
+  linkToGitHub() {
+    this.scrollAndLinkService.linkToGitHub();
+  }
+
+  linkToLinkedIn() {
+    this.scrollAndLinkService.linkToLinkedIn();
+  }
+
 }

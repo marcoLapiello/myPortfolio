@@ -17,11 +17,11 @@
     <span class="name">© Marco Lapiello 2024</span>
 
     <nav>
-      <a href="https://github.com/marcoLapiello"><div class="dot"></div>GitHub</a>
-      <a href="https://www.linkedin.com/in/marco-lapiello/"><div class="dot"></div>LinkedIn</a>
+      <a (click)="linkToGitHub()"><div class="dot"></div>GitHub</a>
+      <a (click)="linkToLinkedIn()"><div class="dot"></div>LinkedIn</a>
       <a (click)="sendEmail()"><div class="dot"></div>Email</a>
-      <a [routerLink] = "['/legalNotice']" href=""><div class="dot"></div>{{ 'FOOTER.LINKS.PRIVACY_NOTICE' | translate }}</a>
-      <a [routerLink] = "['/imprint']" href=""><div class="dot"></div>{{ 'FOOTER.LINKS.IMPRINT' | translate }}</a>
+      <a [routerLink] = "['/legalNotice']"><div class="dot"></div>{{ 'FOOTER.LINKS.PRIVACY_NOTICE' | translate }}</a>
+      <a [routerLink] = "['/imprint']"><div class="dot"></div>{{ 'FOOTER.LINKS.IMPRINT' | translate }}</a>
     </nav>
   </div>
 </footer>

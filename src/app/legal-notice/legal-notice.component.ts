@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../translation.service';
+import { ScrollAndLinkService } from '../scroll-and-links.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -12,10 +13,17 @@ import { TranslationService } from '../translation.service';
 export class LegalNoticeComponent {
   currentLanguage!: string;
 
-  constructor(private translationService: TranslationService){
+  constructor(
+    private translationService: TranslationService,
+    private scrollAndLinkService: ScrollAndLinkService
+  ){
     this.translationService.currentLanguage$.subscribe((language) => {
       this.currentLanguage = language;
     });
+  }
+
+  scrollToSection(sectionId:string): void {
+    this.scrollAndLinkService.scrollToSection(sectionId);
   }
 
 }

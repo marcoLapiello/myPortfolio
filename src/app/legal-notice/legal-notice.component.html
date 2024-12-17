@@ -177,6 +177,7 @@
     <p>
       {{ 'PRIVACY_POLICY.SECTION_SOURCE.TITLE' | translate }} <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
     </p>
-    <button [routerLink]="['']">{{ 'PRIVACY_POLICY.BUTTON_BACK_HOME' | translate }}</button>
+    <button [routerLink]="['']" (click)="scrollToSection('header')">{{ 'PRIVACY_POLICY.BUTTON_BACK_HOME' | translate }}</button>
+    <button (click)="scrollToSection('header')">UP</button>
   </div>
 </section>

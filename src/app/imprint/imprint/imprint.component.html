@@ -22,6 +22,6 @@
 
     <p>{{ 'IMPRINT.SOURCE' | translate }}: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
 
-    <button [routerLink]="['']">{{ 'IMPRINT.BACK' | translate }}</button>
+    <button [routerLink]="['']" (click)="scrollToSection('header')">{{ 'IMPRINT.BACK' | translate }}</button>
   </div>
 </section>
