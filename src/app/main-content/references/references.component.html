@@ -8,7 +8,12 @@
     <div class="scrollContainer" #scrollContainer (scroll)="updateActiveIndexOnManualScroll()">
       @for (singleReference of references; track $index; let referenceIndex = $index) {
       <div class="singleReference"  #singleReference [class.active]="referenceIndex === activeIndex">
-        <p>{{ singleReference.text }}</p>
+        @if (currentLanguage === "en") {
+          <p>{{ singleReference.en }}</p>
+        } @else {
+          <p>{{ singleReference.de }}</p>
+        }
+        
         <div class="authorName">
           <div class="vector"></div>
           <span>{{ singleReference.author }}</span>

@@ -1,6 +1,7 @@
 import { Component, ElementRef, inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../translation.service';
+import { ReferencesService } from './references.service';
 
 @Component({
   selector: 'app-references',
@@ -9,30 +10,18 @@ import { TranslationService } from '../../translation.service';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
-  translate = inject(TranslationService);
+  references: any[] = [];
+  currentLanguage!: string;
 
-  references = [
-    {
-      "text": "Im Rahmen eines gemeinsamen Projekts konnte ich die exzellente Zusammenarbeit mit Marco schätzen. Seine Zuverlässigkeit und organisatorischen Fähigkeiten waren beeindruckend. Darüber hinaus hat er durch seine motivierende Art maßgeblich zum Erfolg unseres Teams beigetragen.",
-      "author": "Tümay Batman"
-    },
-    {
-      "text": "Mit Marco zusammenzuarbeiten, war stets eine positive Erfahrung. Er hat nicht nur fundiertes Wissen, sondern auch ein gutes Auge für Details. Ich schätze besonders, dass er oft über den eigenen Aufgabenbereich hinausdenkt und damit neue Ansätze ins Team bringt. Seine Weitsicht hat dem Projekt immer wieder hilfreiche Impulse gegeben.",
-      "author": "Richard Streu"
-    },
-    {
-      "text": "Marco zeichnet sich durch herausragende organisatorische Fähigkeiten und eine klare, strukturierte Arbeitsweise aus. Er arbeitet stets zuverlässig, ist äußerst pünktlich und versteht es, Aufgaben effizient und zielorientiert zu planen. Seine Führungskompetenz zeigt sich in einem motivierenden Umgang mit dem Team und der Fähigkeit, Projekte erfolgreich zum Abschluss zu bringen.",
-      "author": "Murat Catili"
-    },
-    {
-      "text": "Marco hat sich für ein ansprechendes und benutzerfreundliches Design eingesetzt und durch seine JavaScript-Kenntnisse zur Verbesserung der Funktionalität des Projekts beigetragen. Die Zusammenarbeit war stets angenehm und zielführend.",
-      "author": "Mirko Rinke"
-    },
-    {
-      "text": "Mit Marco zusammenzuarbeiten, war stets eine positive Erfahrung. Er hat nicht nur fundiertes Wissen, sondern auch ein gutes Auge für Details. Ich schätze besonders, dass er oft über den eigenen Aufgabenbereich hinausdenkt und damit neue Ansätze ins Team bringt. Seine Weitsicht hat dem Projekt immer wieder hilfreiche Impulse gegeben.",
-      "author": "David Werner"
-    }
-  ]
+  constructor(
+    private referencesService: ReferencesService,
+    private translationService: TranslationService
+  ){
+    this.references = this.referencesService.getReferences();
+    this.translationService.currentLanguage$.subscribe(
+      (language) => (this.currentLanguage = language)
+    );
+  }
 
   activeIndex = 0;
   arrowIsClicked = false;
