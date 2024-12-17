@@ -7,31 +7,31 @@
   "HERO": {
     "TITLE": "Frontend-Entwickler",
     "NAME": "Marco Lapiello",
-    "CHECK_WORK": "Sehen Sie sich meine Arbeit an",
-    "CONTACT_ME": "Kontaktieren Sie mich",
+    "CHECK_WORK": "Sieh dir meine Arbeit an",
+    "CONTACT_ME": "Kontaktiere mich",
     "EMAIL": "marcolapiello@gmail.com"
   },
   "ABOUT_ME": {
     "WHO_I_AM": "Wer ich bin",
     "TITLE": "Über mich",
-    "INTRO": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in München. Motiviert von den grenzenlosen Möglichkeiten der IT bin ich begeistert davon, visuell ansprechende und intuitive Websites und Anwendungen zu erstellen.",
-    "FLEXIBLE": "Flexibel in Bezug auf Arbeitsumgebungen, ich kann sowohl vor Ort in München als auch remote effektiv arbeiten.",
+    "INTRO": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Karlsruhe. Motiviert von den grenzenlosen Möglichkeiten der IT bin ich begeistert davon, visuell ansprechende und intuitive Websites und Anwendungen zu erstellen.",
+    "FLEXIBLE": "Flexibel in Bezug auf Arbeitsumgebungen, ich kann sowohl vor Ort als auch remote effektiv arbeiten.",
     "OPEN_MINDED": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
-    "PROFESSION": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzusetzen. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+    "PROFESSION": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzusetzen. So helfe ich dir, deine Ziele zu erreichen und deine Visionen zum Leben zu erwecken."
   },
   "SKILLS": {
     "TECHNOLOGIES": "Technologien",
-    "TITLE": "Fähigkeiten",
+    "TITLE": "Skills",
     "INTRO": "Meine Reise hat mich dazu gebracht, an verschiedenen Projekten zu arbeiten und eine Reihe von Frontend-Technologien und -Konzepten einzusetzen. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung vorne zu bleiben.",
-    "NEED": "Brauchen Sie",
+    "NEED": "Brauchst du",
     "ANOTHER_SKILL": "eine andere Fähigkeit?",
-    "CONTACT": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "CONTACT": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
     "LET_TALK": "Lass uns reden"
   },
   "PORTFOLIO": {
     "TITLE": "Portfolio",
     "FEATURED_PROJECTS": "Ausgewählte Projekte",
-    "DESCRIPTION": "Entdecken Sie eine Auswahl meiner Arbeiten hier - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "DESCRIPTION": "Entdecke eine Auswahl meiner Arbeiten hier - Interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     "MODAL": {
       "PROJECT_ABOUT": "Worum geht es in diesem Projekt?",
       "NEXT_PROJECT": "Nächstes Projekt"
@@ -41,25 +41,25 @@
     "TITLE": "Was meine Kollegen über mich sagen"
   },
   "CONTACT_ME": {
-    "TITLE": "Kontaktieren Sie mich",
-    "SUBTITLE": "Lassen Sie uns zusammenarbeiten",
-    "QUESTION": "Haben Sie ein Problem zu lösen?",
-    "INTRO": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
-    "NEED_DEV": "Brauchen Sie einen Frontend-Entwickler?",
+    "TITLE": "Kontaktiere mich",
+    "SUBTITLE": "Lass uns zusammenarbeiten",
+    "QUESTION": "Hast du ein Problem zu lösen?",
+    "INTRO": "Kontaktiere mich über dieses Formular. Ich freue mich darauf, von dir zu hören, deine Ideen zu erfahren und mit meiner Arbeit zu deinen Projekten beizutragen.",
+    "NEED_DEV": "Brauchst du einen Frontend-Entwickler?",
     "LETS_TALK": "Lass uns reden!",
-    "NAME_LABEL": "Wie heißen Sie?",
-    "EMAIL_LABEL": "Wie lautet Ihre E-Mail?",
-    "MESSAGE_LABEL": "Wie kann ich Ihnen helfen?",
-    "PLACEHOLDER_NAME": "Ihr Name kommt hierhin",
-    "PLACEHOLDER_EMAIL": "ihreemail@email.com",
+    "NAME_LABEL": "Wie heißt du?",
+    "EMAIL_LABEL": "Wie lautet deine E-Mail?",
+    "MESSAGE_LABEL": "Wie kann ich dir helfen?",
+    "PLACEHOLDER_NAME": "Dein Name kommt hierhin",
+    "PLACEHOLDER_EMAIL": "deineemail@email.com",
     "PLACEHOLDER_MESSAGE": "Hallo Marco, ich bin interessiert an...",
-    "ERROR_NAME": "Hoppla! Es scheint, dass Ihr Name fehlt",
-    "ERROR_EMAIL": "Hoppla! Ihre E-Mail ist erforderlich",
-    "ERROR_MESSAGE": "Was möchten Sie entwickeln?",
+    "ERROR_NAME": "Hoppla! Es scheint, dass dein Name fehlt",
+    "ERROR_EMAIL": "Hoppla! Deine E-Mail ist erforderlich",
+    "ERROR_MESSAGE": "Was möchtest du entwickeln?",
     "I_HAVE_READ": "Ich habe die",
     "PRIVACY_POLICY": "Datenschutzrichtlinie",
     "AND_AGREE": "gelesen und stimme der Verarbeitung meiner Daten zu, wie beschrieben",
-    "CONFIRMATION": "Ihre Anfrage wurde gesendet",
+    "CONFIRMATION": "Deine Anfrage wurde gesendet",
     "BUTTON": "Sag Hallo ;)"
   },
   "FOOTER": {
