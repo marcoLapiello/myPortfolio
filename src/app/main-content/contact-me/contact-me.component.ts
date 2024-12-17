@@ -108,6 +108,9 @@ export class ContactMeComponent {
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent): void {
+    if (!this.formElement || !this.formElement.nativeElement) {
+      return;
+    }
     const clickedInside = this.formElement.nativeElement.contains(event.target);
     if (!clickedInside) {
       this.formSubmitted = false;
@@ -126,10 +129,6 @@ export class ContactMeComponent {
         }
       });
     }
-  }
-
-  confirmationFeedback(){
-
   }
 
 }
