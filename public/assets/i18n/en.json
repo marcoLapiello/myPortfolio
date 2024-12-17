@@ -70,5 +70,12 @@
       "PRIVACY_NOTICE": "Privacy Notice",
       "IMPRINT": "Imprint"
     }
+  },
+  "IMPRINT": {
+    "TITLE": "Imprint",
+    "CONTACT": "Contact",
+    "PHONE": "Phone",
+    "SOURCE": "Source",
+    "BACK": "Back to the Homepage"
   }
 }

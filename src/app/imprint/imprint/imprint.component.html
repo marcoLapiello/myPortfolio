@@ -1,6 +1,6 @@
 <section>
   <div class="wrapper">
-    <h2>Impressum</h2>
+    <h2>{{ 'IMPRINT.TITLE' | translate }}</h2>
 
     <p>
       <span>Marco Lapiello</span>
@@ -8,9 +8,9 @@
       <span>77815 Bühl, Deutschland</span>
     </p>
 
-    <h3>Kontakt</h3>
+    <h3>{{ 'IMPRINT.CONTACT' | translate }}</h3>
     <p>
-      <span>Telefon:</span>
+      <span>{{ 'IMPRINT.PHONE' | translate }}:</span>
       <span>+49 (0) 174 65 02 529</span>
     </p>
     <p>
@@ -20,8 +20,8 @@
       >
     </p>
 
-    <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+    <p>{{ 'IMPRINT.SOURCE' | translate }}: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
 
-    <button [routerLink]="['']">Zurück zur Homepage</button>
+    <button [routerLink]="['']">{{ 'IMPRINT.BACK' | translate }}</button>
   </div>
 </section>

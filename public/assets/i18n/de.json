@@ -69,5 +69,12 @@
       "PRIVACY_NOTICE": "Datenschutzerklärung",
       "IMPRINT": "Impressum"
     }
+  },
+  "IMPRINT": {
+    "TITLE": "Impressum",
+    "CONTACT": "Kontakt",
+    "PHONE": "Telefon",
+    "SOURCE": "Quelle",
+    "BACK": "Zurück zur Homepage"
   }
 }
