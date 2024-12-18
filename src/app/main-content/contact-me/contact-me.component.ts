@@ -5,6 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../translation.service';
+import { ScrollAndLinkService } from '../../scroll-and-links.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -14,21 +15,28 @@ import { TranslationService } from '../../translation.service';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
-  translate = inject(TranslationService);
-  @ViewChild('formElement') formElement!: ElementRef;
-  @ViewChild('contactForm') contactForm!: NgForm;
-
   formSubmitted = false;
   isChecked = false;
   showPrivacyPolicyError = false;
   formSentConfirmation = false;
   mailTest = true;
-
   contactData = {
     name: "",
     email: "",
     message: "",
   }
+
+  translate = inject(TranslationService);
+  @ViewChild('formElement') formElement!: ElementRef;
+  @ViewChild('contactForm') contactForm!: NgForm;
+
+  constructor (private scrollAndLinkService: ScrollAndLinkService){}
+  
+  scrollToSection(sectionId:string): void {
+    this.scrollAndLinkService.scrollToSection(sectionId);
+  }
+
+  
 
   http = inject(HttpClient);
 
@@ -69,7 +77,6 @@ export class ContactMeComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.isChecked) {
-      console.log("Sent in test-mode", this.contactData);
       this.formSentConfirmation = true;
       this.resetFormState(ngForm);
       setTimeout(() => {
@@ -88,7 +95,6 @@ export class ContactMeComponent {
 
   showGeneralError(ngForm: NgForm): void {
     this.showPrivacyPolicyError = !this.isChecked;
-    console.log("Form is empty. Showing general error.");
     setTimeout(() => {
       this.resetFormState(ngForm);
     }, 3000);
@@ -96,7 +102,6 @@ export class ContactMeComponent {
 
   handleFormErrors(): void {
     this.showPrivacyPolicyError = !this.isChecked;
-    console.log("Form has validation errors.");
   }
 
   resetFormState(ngForm: NgForm): void {

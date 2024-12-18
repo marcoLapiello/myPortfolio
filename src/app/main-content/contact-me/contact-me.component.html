@@ -94,7 +94,7 @@
           <div class="textWrapper">
             <p>
               {{ 'CONTACT_ME.I_HAVE_READ' | translate }}
-              <span [routerLink]="['/legalNotice']" class="privPolicyLink"
+              <span (click)="scrollToSection('header')" [routerLink]="['/legalNotice']" class="privPolicyLink"
                 > {{ 'CONTACT_ME.PRIVACY_POLICY' | translate }}</span
               >
               {{ 'CONTACT_ME.AND_AGREE' | translate }}

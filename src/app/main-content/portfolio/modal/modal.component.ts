@@ -46,16 +46,12 @@ export class ModalComponent {
   openGitHubRepo(): void {
     if (this.project?.gitHubLink) {
       window.open(this.project.gitHubLink, '_blank');
-    } else {
-      console.error('GitHub link not available for this project.');
     }
   }
 
   openLiveTest(): void {
     if (this.project?.liveTestLink) {
       window.open(this.project.liveTestLink, '_blank');
-    } else {
-      console.error('Live test link not available for this project.');
     }
   }
 }
