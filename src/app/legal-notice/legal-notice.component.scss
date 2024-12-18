@@ -138,3 +138,34 @@ section {
         }
     }
 }
+
+.btnsContainer{
+    z-index: 100;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    position: fixed;
+    top: 70%;
+    right: 5px;
+
+    @media(max-width:750px) {
+        scale: 0.9;
+        top: 65%;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(28, 28, 28, 1);
+    }
+
+    .upButton{
+        img {
+            rotate: 90deg;
+        }
+    }
+}
