@@ -63,8 +63,8 @@
                     <img src="img/scrumIcon.png" alt="">
                     <span>Scrum</span>
                 </div>
-                <div class="iconContainer growthMindset">
-                    <div class="speechBubble">
+                <div id="growthMindsetContainer" (click)="showGrowthMindset($event)" [class.pulse]="growthMindsetPulse" class="iconContainer growthMindset">
+                    <div id="speechBubble" [class.dNone]="!growthMindsetOpen" class="speechBubble">
                         <span>I have a special interest in learning</span>
                         <div class="interestIcons">
                             <img src="img/pythonIconAcqua.png" alt="">
