@@ -193,7 +193,7 @@ section {
                         height: 24px;
                         background-image: url('./../../../../public/img/checkMarkOutline.png');
 
-                        @media(hover: hover) {
+                        @media((hover: hover) and (pointer: fine)) {
                             &:hover {
                                 cursor: pointer;
                                 background-image: url('./../../../../public/img/checkMarkOutlineHover.png');
@@ -205,7 +205,7 @@ section {
                     .checked {
                         background-image: url('./../../../../public/img/CheckMarkChecked.png');
 
-                        @media(hover: hover) {
+                        @media((hover: hover) and (pointer: fine)) {
                             &:hover {
                                 cursor: pointer;
                                 background-image: url('./../../../../public/img/checkMarkCheckedHover.png');
@@ -233,7 +233,7 @@ section {
                             font-weight: 400;
                             font-size: 15px;
     
-                            @media (hover: hover){
+                            @media ((hover: hover) and (pointer: fine)){
                                 &:hover{
                                     cursor: pointer;
                                 }

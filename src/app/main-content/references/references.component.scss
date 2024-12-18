@@ -259,7 +259,7 @@ section {
             background-repeat: no-repeat;
             transition: all 150ms;
 
-            @media(hover: hover){
+            @media((hover: hover) and (pointer: fine)){
                 &:hover {
                     cursor: pointer;
                     background-image: url('./../../../../public/img/arrow_back_aqua.png');
@@ -277,7 +277,7 @@ section {
             background-repeat: no-repeat;
             transition: all 150ms;
 
-            @media(hover: hover){
+            @media((hover: hover) and (pointer: fine)){
                 &:hover {
                     cursor: pointer;
                     background-image: url('./../../../../public/img/arrow_forward_aqua.png');

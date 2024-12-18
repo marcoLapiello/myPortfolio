@@ -124,7 +124,7 @@ footer {
                     transition: all 300ms ease-in-out;
                 }
 
-                @media(hover:hover){
+                @media((hover: hover) and (pointer: fine)){
                     &:hover {
                         cursor: pointer;
                         color: rgba(61, 207, 182, 1);

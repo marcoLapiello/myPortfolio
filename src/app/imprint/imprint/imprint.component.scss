@@ -82,10 +82,10 @@ section {
         }
     
         .mailLink {
-            text-decoration: underline;
+            // text-decoration: underline;
             color: rgba(61, 207, 182, 1);
     
-            @media(hover: hover) {
+            @media((hover: hover) and (pointer: fine)) {
                 cursor: pointer;
             }
         }

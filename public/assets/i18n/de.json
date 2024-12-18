@@ -7,8 +7,8 @@
   "HERO": {
     "TITLE": "Frontend-Entwickler",
     "NAME": "Marco Lapiello",
-    "CHECK_WORK": "Sieh dir meine Arbeit an",
-    "CONTACT_ME": "Kontaktiere mich",
+    "CHECK_WORK": "Meine Arbeit",
+    "CONTACT_ME": "Kontakt",
     "EMAIL": "marcolapiello@gmail.com"
   },
   "ABOUT_ME": {
@@ -42,7 +42,7 @@
   },
   "CONTACT_ME": {
     "TITLE": "Kontaktiere mich",
-    "SUBTITLE": "Lass uns zusammenarbeiten",
+    "SUBTITLE": "Lass uns zusammen arbeiten",
     "QUESTION": "Hast du ein Problem zu lösen?",
     "INTRO": "Kontaktiere mich über dieses Formular. Ich freue mich darauf, von dir zu hören, deine Ideen zu erfahren und mit meiner Arbeit zu deinen Projekten beizutragen.",
     "NEED_DEV": "Brauchst du einen Frontend-Entwickler?",

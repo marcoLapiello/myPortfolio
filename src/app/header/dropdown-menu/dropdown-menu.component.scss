@@ -1,5 +1,5 @@
 .modal-overlay {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: -32px;
     left: 0px;
@@ -26,6 +26,14 @@ nav {
         height: 28px;
         width: 84px;
         background-image: url(./../../../../public/img/englishDefault.png);
+        transition: all 150ms ease-in-out;
+
+        @media((hover: hover) and (pointer: fine)) {
+            &:Hover {
+                cursor: pointer;
+                background-image: url(./../../../../public/img/germanHover.png);
+            }
+        }
 
         &:Hover {
             cursor: pointer;
@@ -37,11 +45,16 @@ nav {
         height: 28px;
         width: 84px;
         background-image: url(./../../../../public/img/germanDefault.png);
+        transition: all 150ms ease-in-out;
 
-        &:Hover {
-            cursor: pointer;
-            background-image: url(./../../../../public/img/germanHover.png);
+        @media((hover: hover) and (pointer: fine)) {
+            &:Hover {
+                cursor: pointer;
+                background-image: url(./../../../../public/img/germanHover.png);
+            }
         }
+
+       
     }
 
     a {
@@ -65,12 +78,16 @@ nav {
             // transition: all 300ms ease-in-out;
         }
 
-        &:hover {
-            color: rgba(61, 207, 182, 1);
-
-            .dot{
-                opacity: 1;
+        @media((hover: hover) and (pointer: fine)) {
+            &:hover {
+                color: rgba(61, 207, 182, 1);
+    
+                .dot {
+                    opacity: 1;
+                }
             }
         }
+
+        
     }
 }
