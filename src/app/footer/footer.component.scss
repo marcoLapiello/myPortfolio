@@ -13,12 +13,12 @@ footer {
         align-items: center;
         position: relative;
 
-        @media(max-width:1400px){
+        @media(max-width:1400px) {
             padding: 0% 5%;
             padding-bottom: 25px;
         }
 
-        @media(max-width:750px){
+        @media(max-width:750px) {
             height: calc(180px + 25px);
             align-items: flex-start;
         }
@@ -26,14 +26,29 @@ footer {
         .footerLeft {
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 16px;
 
-            
+
 
             .logoContainer {
+                width: 150px;
+                height: 90px;
                 display: flex;
                 align-items: center;
-                gap: 4px;
+                
+                border-radius: 12px;
+                background-image: url('./../../../public/img/logoMio6Big.png');
+                background-position: center;
+                background-size: cover;
+                transition: all 125ms ease-in;
+
+                @media((hover: hover) and (pointer: fine)) {
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid white;
+    
+                    }
+                }
 
                 .logoText {
                     display: flex;
@@ -66,7 +81,7 @@ footer {
                     font-size: 16px;
                     font-weight: 400;
 
-                    @media(max-width:400px){
+                    @media(max-width:400px) {
                         font-size: 14px;
                     }
                 }
@@ -83,12 +98,12 @@ footer {
             left: 50%;
             transform: translateX(-50%);
 
-            @media(max-width:750px){
+            @media(max-width:750px) {
                 width: 100%;
-                top: 75%;
+                top: 78%;
                 text-align: center;
             }
-            
+
         }
 
         nav {
@@ -96,7 +111,7 @@ footer {
             flex-direction: column;
             gap: 8px;
 
-            @media(max-width:750px){
+            @media(max-width:750px) {
                 padding: 0;
             }
 
@@ -109,7 +124,7 @@ footer {
                 position: relative;
                 transition: all 300ms ease-in-out;
 
-                @media(max-width:400px){
+                @media(max-width:400px) {
                     font-size: 14px;
                 }
 
@@ -124,17 +139,17 @@ footer {
                     transition: all 300ms ease-in-out;
                 }
 
-                @media((hover: hover) and (pointer: fine)){
+                @media((hover: hover) and (pointer: fine)) {
                     &:hover {
                         cursor: pointer;
                         color: rgba(61, 207, 182, 1);
-    
-                        .dot{
+
+                        .dot {
                             opacity: 1;
                         }
                     }
                 }
-                
+
             }
         }
     }
