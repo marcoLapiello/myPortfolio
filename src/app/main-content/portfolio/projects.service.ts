@@ -37,7 +37,7 @@ export class ProjectsService {
         'img/modal_technology_icons/css.png',
       ],
       gitHubLink: "https://github.com/marcoLapiello/Developer-Akademie-Join",
-      // liveTestLink:
+      liveTestLink: "https://join.marco-lapiello-developer.com"
     },
     {
       title: "El Pollo Loco",
