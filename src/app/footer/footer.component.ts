@@ -13,7 +13,7 @@ import { TranslationService } from '../translation.service';
 })
 export class FooterComponent {
   translate = inject(TranslationService);
-  emailAddress = "marcolapiello@gmail.com";
+  emailAddress = "hello@marco-lapiello-developer.com";
 
   constructor (private scrollAndLinkService: ScrollAndLinkService){}
 

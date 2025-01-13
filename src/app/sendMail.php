@@ -18,7 +18,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'marcolapiello@gmail.com';  
+            $recipient = 'hello@marco-lapiello-developer.com';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     
@@ -31,7 +31,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
-        default: //Reject any non POST or OPTIONS requests.
+            default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
             exit;
     } 

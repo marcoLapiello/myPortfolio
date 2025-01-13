@@ -19,7 +19,7 @@ export class ContactMeComponent {
   isChecked = false;
   showPrivacyPolicyError = false;
   formSentConfirmation = false;
-  mailTest = true;
+  mailTest = false;
   contactData = {
     name: "",
     email: "",
@@ -41,7 +41,7 @@ export class ContactMeComponent {
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://marco-lapiello-developer.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

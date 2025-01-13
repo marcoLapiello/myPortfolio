@@ -11,7 +11,7 @@ import { TranslationService } from '../../translation.service';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
-  emailAddress = "marcolapiello@gmail.com";
+  emailAddress = "hello@marco-lapiello-developer.com";
   constructor(private scrollAndLinkService: ScrollAndLinkService) {}
 
   translate = inject(TranslationService);
