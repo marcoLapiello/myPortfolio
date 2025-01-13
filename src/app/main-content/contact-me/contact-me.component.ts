@@ -30,13 +30,13 @@ export class ContactMeComponent {
   @ViewChild('formElement') formElement!: ElementRef;
   @ViewChild('contactForm') contactForm!: NgForm;
 
-  constructor (private scrollAndLinkService: ScrollAndLinkService){}
-  
-  scrollToSection(sectionId:string): void {
+  constructor(private scrollAndLinkService: ScrollAndLinkService) { }
+
+  scrollToSection(sectionId: string): void {
     this.scrollAndLinkService.scrollToSection(sectionId);
   }
 
-  
+
 
   http = inject(HttpClient);
 
@@ -67,9 +67,11 @@ export class ContactMeComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-
-            ngForm.resetForm();
+            this.formSentConfirmation = true;
+            this.resetFormState(ngForm);
+            setTimeout(() => {
+              this.formSentConfirmation = false;
+            }, 3000);
           },
           error: (error) => {
             console.error(error);
