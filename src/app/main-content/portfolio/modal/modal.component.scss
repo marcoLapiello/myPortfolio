@@ -38,15 +38,16 @@
 
     @media(max-width:431px) {
         height: 100dvh;
-        transform: translate(-50%, -50%) scale(0.9);
+        min-width: 99%;
+        // transform: translate(-50%, -50%) scale(0.9);
     }
 
     @media(max-width:390px) {
-        transform: translate(-50%, -50%) scale(0.78);
+        // transform: translate(-50%, -50%) scale(0.78);
     }
 
     @media(max-width:350px) {
-        transform: translate(-50%, -50%) scale(0.68);
+        // transform: translate(-50%, -50%) scale(0.68);
     }
 
     .contentWrapper {
