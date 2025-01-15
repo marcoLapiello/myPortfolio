@@ -55,7 +55,7 @@ export class ProjectsService {
         'img/modal_technology_icons/css.png',
       ],
       gitHubLink: "https://github.com/marcoLapiello/El-pollo-loco---javascript-game",
-      // liveTestLink:
+      liveTestLink: "coming soon"
     },
   ];
 

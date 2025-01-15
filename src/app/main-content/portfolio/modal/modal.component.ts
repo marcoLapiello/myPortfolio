@@ -12,25 +12,29 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ModalComponent {
   @Input() projectId!: number;
   @Output() close = new EventEmitter<void>();
-
+  projektLinkState = "";
   currentLanguage!: string;
 
   constructor(
     private projectsService: ProjectsService,
     private translationService: TranslationService
-  ) 
-    {
+  ) {
     this.translationService.currentLanguage$.subscribe(
       (language) => (this.currentLanguage = language)
     );
+    
   }
 
-  
+  ngOnChanges(): void {
+    this.updateProjektLinkState();
+  }
+
+
   get project() {
     return this.projectsService.getProjectById(this.projectId - 1);
   }
 
-  
+
   get description(): string {
     return this.project?.descriptions[this.currentLanguage as 'en' | 'de'] || '';
   }
@@ -41,6 +45,7 @@ export class ModalComponent {
 
   nextProject(): void {
     this.projectId = (this.projectId % this.projectsService.getProjectsLength()) + 1;
+    this.updateProjektLinkState();
   }
 
   openGitHubRepo(): void {
@@ -53,5 +58,9 @@ export class ModalComponent {
     if (this.project?.liveTestLink) {
       window.open(this.project.liveTestLink, '_blank');
     }
+  }
+
+  updateProjektLinkState(): void {
+    this.projektLinkState = this.project?.liveTestLink && this.project.liveTestLink !== 'coming soon' ? 'live' : 'coming soon';
   }
 }
