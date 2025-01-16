@@ -11,7 +11,7 @@ import { ScrollAndLinkService } from '../../scroll-and-links.service';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  emailAddress = "marcolapiello@gmail.com";
+  emailAddress = "hello@marco-lapiello-developer.com";
   currentLanguage!: string;
 
   constructor(
