@@ -14,6 +14,7 @@ import { TranslationService } from '../translation.service';
 export class FooterComponent {
   translate = inject(TranslationService);
   emailAddress = "hello@marco-lapiello-developer.com";
+  currentYear = new Date().getFullYear();
 
   constructor (private scrollAndLinkService: ScrollAndLinkService){}
 
