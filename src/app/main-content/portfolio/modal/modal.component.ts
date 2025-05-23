@@ -42,8 +42,8 @@ export class ModalComponent {
   get description(): string {
     return this.project?.descriptions[this.currentLanguage as 'en' | 'de'] || '';
   }
-
   closeModal(): void {
+    // Add a small delay to allow exit animation
     this.dialogRef.close();
   }
 

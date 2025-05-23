@@ -26,23 +26,27 @@ export class PortfolioComponent {
     // Get current window width for responsive behavior
     const isMobile = window.innerWidth <= 768;
     
+    // Set body overflow to hidden before opening dialog to prevent page jumping
+    document.body.style.overflow = 'hidden';
+    
     const dialogRef = this.dialog.open(ModalComponent, {
       width: isMobile ? '100%' : '90vw',
       height: isMobile ? '100dvh' : 'auto',
       maxWidth: isMobile ? '100%' : '1440px',
       panelClass: ['custom-dialog-container', isMobile ? 'mobile-dialog' : ''],
       hasBackdrop: true,
-      backdropClass: 'custom-backdrop',
+      backdropClass: 'default-backdrop', 
       autoFocus: false,
       disableClose: isMobile, // On mobile, prefer using the close button
       maxHeight: isMobile ? '100dvh' : '90vh',
+      enterAnimationDuration: '250ms',
+      exitAnimationDuration: '200ms',
       data: { projectId: projectId + 1 }
     });
 
+    // Reset body overflow when dialog closes
     dialogRef.afterClosed().subscribe(() => {
       document.body.style.overflow = '';
     });
-
-    document.body.style.overflow = 'hidden';
   }
 }
