@@ -109,19 +109,16 @@
   
   .mat-mdc-dialog-content {
     max-height: none !important; // Remove max-height limitation
-    position: relative; // Proper stacking context
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    padding: 0; // Remove default padding
-    margin: 0; // Remove default margin
-    border-radius: 0;
-    overflow-y: auto; // Allow scrolling
-    -ms-overflow-style: none; // Hide scrollbars IE/Edge
-    scrollbar-width: none; // Hide scrollbars Firefox
-
+    height: 100dvh !important;
+    padding: 0 !important; // Remove default padding
+    margin: 0 !important; // Remove default margin
+    overflow-y: auto !important; // Ensure content is scrollable
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
-      display: none; // Hide scrollbars Chrome/Safari/Opera
+      display: none !important;
     }
   }
 }

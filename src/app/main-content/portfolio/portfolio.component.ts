@@ -28,8 +28,7 @@ export class PortfolioComponent {
     
     // Set body overflow to hidden before opening dialog to prevent page jumping
     document.body.style.overflow = 'hidden';
-    
-    const dialogRef = this.dialog.open(ModalComponent, {
+      const dialogRef = this.dialog.open(ModalComponent, {
       width: isMobile ? '100%' : '90vw',
       height: isMobile ? '100dvh' : 'auto',
       maxWidth: isMobile ? '100%' : '1440px',
