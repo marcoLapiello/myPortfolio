@@ -1,0 +1,70 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+// Define custom palette
+$portfolio-aqua: (
+  50: #e8f8f5,
+  100: #c6ede6,
+  200: #a1e1d6,
+  300: #7bd5c5,
+  400: #5eccb9,
+  500: #3dcfb6, // Your brand color
+  600: #37c5ad,
+  700: #2ebda3,
+  800: #25b69a,
+  900: #13a989,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+// Create the palettes
+$portfolio-primary: mat.define-palette($portfolio-aqua);
+$portfolio-accent: mat.define-palette($portfolio-aqua);
+$portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// Define dark theme colors
+$dark-theme-background: (
+  status-bar: black,
+  app-bar:    rgb(28, 28, 28),
+  background: rgb(28, 28, 28),
+  hover:      rgba(61, 207, 182, 0.1),
+  card:       rgb(28, 28, 28),
+  dialog:     rgb(28, 28, 28),
+  disabled-button: rgba(white, 0.12),
+  raised-button: rgb(28, 28, 28),
+  focused-button: rgba(white, 0.12),
+  selected-button: rgb(66, 66, 66),
+  selected-disabled-button: rgb(33, 33, 33),
+  disabled-button-toggle: black,
+  unselected-chip: rgb(66, 66, 66),
+  disabled-list-option: rgba(white, 0.12),
+  tooltip: rgb(97, 97, 97),
+);
+
+// Create dark theme
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $portfolio-primary,
+    accent: $portfolio-accent,
+    warn: $portfolio-warn,
+  )
+));
+
+// Add custom background colors
+$theme: map.deep-merge($dark-theme, (
+  'background': $dark-theme-background,
+));
+
+// Apply theme
+@include mat.core();
+@include mat.all-component-themes($theme);

@@ -1,0 +1,53 @@
+// Material Dialog Overrides
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: transparent;
+}
+
+.custom-dialog-container {
+  .mat-mdc-dialog-surface {
+    border-radius: 30px !important;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: transparent;
+  }
+}
+
+.cdk-overlay-backdrop {
+  z-index: 1000;
+}
+
+.cdk-overlay-pane {
+  z-index: 1001;
+}
+
+// Material Button Overrides
+.mat-mdc-raised-button {
+  &.mat-primary {
+    --mdc-protected-button-container-color: #3DCFB6;
+    --mdc-protected-button-label-text-color: #ffffff;
+  }
+
+  &:not(.mat-primary) {
+    --mdc-protected-button-container-color: rgba(61, 207, 182, 0.1);
+    --mdc-protected-button-label-text-color: #ffffff;
+  }
+}
+
+// Material Chip Overrides
+.mat-mdc-chip {
+  &.mat-mdc-standard-chip {
+    --mdc-chip-elevated-container-color: rgba(61, 207, 182, 0.1);
+    --mdc-chip-label-text-color: #ffffff;
+    border: 1px solid #3DCFB6 !important;
+  }
+}
+
+// Material Card Overrides
+.mat-mdc-card {
+  --mdc-elevated-card-container-color: transparent;
+}

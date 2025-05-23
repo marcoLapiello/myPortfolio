@@ -1,46 +1,50 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { TranslationService } from '../../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MaterialModule } from '../../../material.module';
+import { CommonModule } from '@angular/common';
+
+export interface ProjectDialogData {
+  projectId: number;
+}
 
 @Component({
   selector: 'app-modal',
-  imports: [TranslateModule],
+  standalone: true,
+  imports: [TranslateModule, MaterialModule, CommonModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-  @Input() projectId!: number;
-  @Output() close = new EventEmitter<void>();
+  projectId: number;
   projektLinkState = "";
   currentLanguage!: string;
 
   constructor(
     private projectsService: ProjectsService,
-    private translationService: TranslationService
+    private translationService: TranslationService,
+    private dialogRef: MatDialogRef<ModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: ProjectDialogData
   ) {
+    this.projectId = data.projectId;
     this.translationService.currentLanguage$.subscribe(
       (language) => (this.currentLanguage = language)
     );
-    
-  }
-
-  ngOnChanges(): void {
     this.updateProjektLinkState();
   }
-
 
   get project() {
     return this.projectsService.getProjectById(this.projectId - 1);
   }
-
 
   get description(): string {
     return this.project?.descriptions[this.currentLanguage as 'en' | 'de'] || '';
   }
 
   closeModal(): void {
-    this.close.emit();
+    this.dialogRef.close();
   }
 
   nextProject(): void {

@@ -6,9 +6,6 @@
       <p>
         {{ 'PORTFOLIO.DESCRIPTION' | translate }}
       </p>
-      @if (showModal === true) {
-        <app-modal [projectId]="selectedProjectId" (close)="closeModal()"></app-modal>
-      }
       
       <div class="projectsContainer">
         @for (singleProject of projects; track $index) {
@@ -25,17 +22,16 @@
               </p>
             </div>
             <div [class]="singleProject.imgStyleClass">
-              <img class="projectImg" [src]="singleProject.imgPath" alt="" />
+              <img class="projectImg" [src]="singleProject.imgPath" [alt]="singleProject.title" />
               <img
                 class="projectImgBackground"
                 src="img/projectImgBackground.png"
-                alt=""
+                alt="Background decoration"
               />
             </div>
           </div>
         }
       </div>
-
     </div>
   </div>
 </section>
