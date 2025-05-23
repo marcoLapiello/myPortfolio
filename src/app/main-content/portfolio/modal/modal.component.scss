@@ -15,6 +15,19 @@
   .mdc-dialog__content {
     padding: 0;
   }
+
+  // Make dialog full screen on mobile
+  @media (max-width: 768px) {
+    .mdc-dialog__container {
+      height: 100dvh;
+      width: 100%;
+    }
+
+    .mdc-dialog__surface {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
 }
 
 .modal-overlay {
@@ -25,7 +38,6 @@
     height: 100dvh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-
 }
 
 .modal-content {
@@ -35,15 +47,32 @@
   border-radius: 30px;
   border: 1px solid #3DCFB6;
   z-index: 1002; // Ensure content is above overlay
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media(max-width:1300px) {
     padding: 80px 5%;
   }
 
-  @media(max-width:431px) {
-    height: 100vh;
-    padding: 60px 20px;
+  @media(max-width:768px) {
+    width: 100%;
+    height: 100dvh;
+    padding: 60px 24px;
     border-radius: 0;
+    border: none;
+    overflow-y: auto; // Allow scrolling on mobile
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media(max-width:480px) {
+    padding: 50px 16px 70px; // Add bottom padding for the next button
   }
 }
 
@@ -52,11 +81,22 @@
   align-items: center;
   justify-content: space-between;
   gap: 80px;
+  height: 100%;
 
   @media(max-width:1300px) {
     flex-direction: column-reverse;
     justify-content: flex-start;
     gap: 40px;
+  }
+
+  @media(max-width:768px) {
+    gap: 30px;
+    flex: 1;
+    min-height: min-content; // Ensure content can expand beyond viewport
+  }
+
+  @media(max-width:480px) {
+    gap: 20px;
   }
 }
 
@@ -70,6 +110,14 @@
     width: 100%;
   }
 
+  @media(max-width:768px) {
+    gap: 30px;
+  }
+
+  @media(max-width:480px) {
+    gap: 20px;
+  }
+
   .title {
     .projectNr {
       color: #3DCFB6;
@@ -80,6 +128,17 @@
 
       @media(max-width:1300px) {
         font-size: 72px;
+        line-height: 72px;
+      }
+
+      @media(max-width:768px) {
+        font-size: 64px;
+        line-height: 64px;
+      }
+
+      @media(max-width:480px) {
+        font-size: 48px;
+        line-height: 48px;
       }
     }
 
@@ -95,13 +154,30 @@
         font-size: 56px;
         line-height: 50px;
       }
+
+      @media(max-width:768px) {
+        font-size: 40px;
+        line-height: 44px;
+      }
+
+      @media(max-width:480px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
   }
-
   .description {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media(max-width:768px) {
+      gap: 16px;
+    }
+
+    @media(max-width:480px) {
+      gap: 12px;
+    }
 
     h3 {
       color: #3DCFB6;
@@ -111,6 +187,10 @@
 
       @media(max-width:1300px) {
         font-size: 20px;
+      }
+
+      @media(max-width:480px) {
+        font-size: 18px;
       }
     }
 
@@ -123,6 +203,10 @@
       @media(max-width:1300px) {
         font-size: 16px;
       }
+
+      @media(max-width:480px) {
+        font-size: 14px;
+      }
     }
 
     .technologies {
@@ -131,10 +215,19 @@
       flex-wrap: wrap;
       gap: 16px;
 
+      @media(max-width:480px) {
+        gap: 10px;
+      }
+
       .mat-mdc-chip {
         background-color: rgba(61, 207, 182, 0.1);
         border: 1px solid #3DCFB6;
         color: white;
+
+        @media(max-width:480px) {
+          height: 28px;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -148,10 +241,17 @@
     justify-content: center;
   }
 
+  @media(max-width:480px) {
+    gap: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   button {
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: center;
 
     &[disabled] {
       opacity: 0.5;
@@ -187,9 +287,29 @@
   top: 20px;
   right: 20px;
   color: white;
+  z-index: 1010; // Ensure button is clickable
+  
+  @media(max-width:768px) {
+    position: fixed; // Fixed position on mobile for scrolling
+    top: 16px;
+    right: 16px;
+  }
+
+  @media(max-width:480px) {
+    top: 12px;
+    right: 12px;
+  }
 
   &:hover {
     color: #3DCFB6;
+  }
+
+  .mat-icon {
+    font-size: 24px;
+    
+    @media(max-width:480px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -201,6 +321,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 1010; // Ensure button is clickable
+  
+  @media(max-width:768px) {
+    position: fixed; // Fixed position on mobile for scrolling
+    bottom: 16px;
+    right: 16px;
+    background-color: rgba(28, 28, 28, 0.7); // Semi-transparent background
+    backdrop-filter: blur(5px); // Blur effect for better visibility
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+
+  @media(max-width:480px) {
+    bottom: 12px;
+    right: 12px;
+  }
 
   &:hover {
     color: white;

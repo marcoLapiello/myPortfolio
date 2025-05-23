@@ -22,16 +22,20 @@ export class PortfolioComponent {
     private dialog: MatDialog
   ) {
     this.projects = this.projectsService.getProjects();
-  }
-
-  openModal(project: {}, projectId: number): void {
+  }  openModal(project: {}, projectId: number): void {
+    // Get current window width for responsive behavior
+    const isMobile = window.innerWidth <= 768;
+    
     const dialogRef = this.dialog.open(ModalComponent, {
-      width: '90vw',
-      maxWidth: '1440px',
-      panelClass: 'custom-dialog-container',
+      width: isMobile ? '100%' : '90vw',
+      height: isMobile ? '100dvh' : 'auto',
+      maxWidth: isMobile ? '100%' : '1440px',
+      panelClass: ['custom-dialog-container', isMobile ? 'mobile-dialog' : ''],
       hasBackdrop: true,
       backdropClass: 'custom-backdrop',
       autoFocus: false,
+      disableClose: isMobile, // On mobile, prefer using the close button
+      maxHeight: isMobile ? '100dvh' : '90vh',
       data: { projectId: projectId + 1 }
     });
 
